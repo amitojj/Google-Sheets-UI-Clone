@@ -1,0 +1,1077 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="Amit Kumar" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.css"
+    />
+
+    <title>Clone-Google Sheets</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        min-width: 0;
+        min-height: 0;
+      }
+    </style>
+  </head>
+
+  <body class="font-rob flex w-screen h-screen flex-col">
+    <!-- ─── Navbar ──────────────────────────────────────────────────────── ✣ ─ -->
+    <nav class="navbar flex justify-between items-center h-16 max-h-16">
+      <!-- ───sheets Logo ────────────────────────────────────────────────── ✣ ─ -->
+      <div class="group relative min-w-max">
+        <div class="logo flex items-center justify-center h-16 w-16">
+          <img
+            src="./assets/google-sheets-logo-icon.svg"
+            alt="google-sheets-icon"
+            class="w-9 h-9"
+          />
+        </div>
+        <!-- tooltip -->
+        <div class="-bottom-5 left-1 tooltip">Sheets Home</div>
+      </div>
+      <!-- ─── Center Container ────────────────────── ✣ ─ -->
+      <div class="flex flex-col flex-1 pt-2 text-gray-600">
+        <!-- upper-row -->
+        <div class="flex items-center gap-1">
+          <!-- sheet-name -->
+          <div class="group relative">
+            <input
+              type="text"
+              class="text-lg hover:border border-black pl-2 px-0 h-7 rounded-md"
+              value="Untitled spreadsheet"
+            />
+            <!-- tooltip -->
+            <div class="left-1/3 tooltip">Rename</div>
+          </div>
+          <!-- icons -->
+          <div class="bg-white flex items-center gap-1 min-w-max z-50">
+            <!-- star -->
+            <div
+              class="hover:bg-gray-200 px-1 rounded-full cursor-pointer group relative"
+            >
+              <i class="fa-regular fa-star text-sm"></i>
+              <!-- tooltip -->
+              <div class="-left-1/3 tooltip">Star</div>
+            </div>
+            <!-- move -->
+            <div
+              class="hover:bg-gray-200 p-1 rounded-full cursor-pointer group relative"
+            >
+              <img
+                src="./assets/drive_file_move_black_24dp.svg"
+                alt=""
+                class="w-[18px] h-[18px]"
+              />
+              <div class="-left-1/3 tooltip">Move</div>
+            </div>
+            <!-- document status -->
+            <div
+              class="hover:bg-gray-200 p-1 rounded-full cursor-pointer group relative"
+            >
+              <img
+                src="./assets/cloud_done_black_24dp.svg"
+                alt=""
+                class="w-[18px] h-[18px]"
+              />
+              <div class="-left-[200%] tooltip">See Document Status</div>
+            </div>
+          </div>
+        </div>
+        <!-- lower-row -->
+        <div class="flex items-center text-sm flex-shrink-0 min-w-max">
+          <!-- ─── File ────────────────── ✣ ─ -->
+          <div class="group relative">
+            <div
+              class="hover:bg-gray-200 px-2.5 py-1 rounded-md cursor-pointer"
+            >
+              File
+            </div>
+            <!-- dropdown file menu -->
+            <div class="menu hidden group-hover:block">
+              <!-- section1 -->
+              <div class="flex flex-col py-2">
+                <!-- new -->
+                <div class="menu-item group/new">
+                  <div class="w-4 h-4">
+                    <img
+                      src="./assets/nordic.png"
+                      alt=""
+                      class="w-3.5 h-3.5 opacity-75"
+                    />
+                  </div>
+                  <p class="flex-1 h-4">New</p>
+                  <i class="fa-solid fa-caret-right opacity-65"></i>
+                  <!-- submenu -->
+                  <div
+                    class="menu top-0 left-80 w-56 hidden group-hover/new:block"
+                  >
+                    <div class="menu-item">
+                      <div class="w-4 h-4">
+                        <img
+                          src="./assets/nordic-green.png"
+                          alt=""
+                          class="w-4 h-4"
+                        />
+                      </div>
+                      <p class="flex-1 h-4">Spreadsheet</p>
+                    </div>
+                    <div class="menu-item">
+                      <div class="w-4 h-4">
+                        <img
+                          src="./assets/template.jpg"
+                          alt=""
+                          class="w-4 h-4"
+                        />
+                      </div>
+                      <p class="flex-1 h-4">From template gallery</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Open -->
+                <div class="menu-item">
+                  <div class="w-4 h-4">
+                    <i class="fa-regular fa-folder-open text-[15px]"></i>
+                  </div>
+                  <p class="flex-1 h-4">Open</p>
+                  <p class="opacity-65">Ctrl+O</p>
+                </div>
+                <!-- Import -->
+                <div class="menu-item">
+                  <div class="w-4 h-4">
+                    <i class="fa-solid fa-file-import text-[15px]"></i>
+                  </div>
+                  <p class="flex-1 h-4">Import</p>
+                </div>
+                <!-- copy -->
+                <div class="menu-item">
+                  <div class="w-4 h-4">
+                    <i class="fa-solid fa-copy text-[15px]"></i>
+                  </div>
+                  <p class="flex-1 h-4">Make a copy</p>
+                </div>
+              </div>
+              <!-- Seperator -->
+              <hr />
+              <!-- section2 -->
+              <div class="flex flex-col py-2">
+                <!-- Share -->
+                <div class="menu-item group/share">
+                  <div class="w-4 h-4">
+                    <i class="fa-solid fa-user-plus text-[15px]"></i>
+                  </div>
+                  <p class="flex-1 h-4">Share</p>
+                  <i class="fa-solid fa-caret-right opacity-65"></i>
+                  <!-- submenu -->
+                  <div
+                    class="menu top-0 left-80 w-64 hidden group-hover/share:block"
+                  >
+                    <div class="menu-item">
+                      <div class="w-4 h-4">
+                        <i class="fa-solid fa-user-plus text-[15px]"></i>
+                      </div>
+                      <p class="flex-1 h-4">Share with others</p>
+                    </div>
+                    <div class="menu-item">
+                      <div class="w-4 h-4">
+                        <i class="fa-solid fa-earth-americas text-[15px]"></i>
+                      </div>
+                      <p class="flex-1 h-4">Publish to web</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Email -->
+                <div class="menu-item group/email">
+                  <div class="w-4 h-4">
+                    <i class="fa-solid fa-envelope text-[15px]"></i>
+                  </div>
+                  <p class="flex-1 h-4">Email</p>
+                  <i class="fa-solid fa-caret-right opacity-65"></i>
+                  <!-- submenu -->
+                  <div
+                    class="menu top-0 left-80 w-64 hidden group-hover/email:block"
+                  >
+                    <div class="menu-item">
+                      <p class="flex-1 h-4">Email this file</p>
+                    </div>
+                    <div class="menu-item">
+                      <p class="flex-1 h-4">Email collaborators</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Download -->
+                <div class="menu-item group/download">
+                  <div class="w-4 h-4">
+                    <i class="fa-solid fa-download text-[15px]"></i>
+                  </div>
+                  <p class="flex-1 h-4">Download</p>
+                  <i class="fa-solid fa-caret-right opacity-65"></i>
+                  <!-- submenu -->
+                  <div
+                    class="menu top-0 left-80 w-64 hidden group-hover/download:block"
+                  >
+                    <div class="menu-item">
+                      <p class="flex-1 h-4">Microsoft Excel (.xslx)</p>
+                    </div>
+                    <div class="menu-item">
+                      <p class="flex-1 h-4">OpenDocument (.ods)</p>
+                    </div>
+                    <div class="menu-item">
+                      <p class="flex-1 h-4">PDF (.pdf)</p>
+                    </div>
+                    <div class="menu-item">
+                      <p class="flex-1 h-4">Web Page (.html)</p>
+                    </div>
+                    <div class="menu-item">
+                      <p class="flex-1 h-4">Comma Seperated Values (.csv)</p>
+                    </div>
+                    <div class="menu-item">
+                      <p class="flex-1 h-4">Tab Seperated Values (.tsv)</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Seperator -->
+              <hr />
+              <!-- section3 -->
+              <div class="flex flex-col py-2">
+                <!-- rename -->
+                <div class="menu-item">
+                  <div class="w-4 h-4">
+                    <i class="fa-solid fa-pencil text-[15px]"></i>
+                  </div>
+                  <p class="flex-1 h-4">Rename</p>
+                </div>
+                <!-- move -->
+                <div class="menu-item">
+                  <div class="w-4 h-4">
+                    <i class="fa-solid fa-folder-tree text-[15px]"></i>
+                  </div>
+                  <p class="flex-1 h-4">Move</p>
+                </div>
+                <!-- drive -->
+                <div class="menu-item">
+                  <div class="w-4 h-4">
+                    <i class="fa-brands fa-google-drive text-[15px]"></i>
+                  </div>
+                  <p class="flex-1 h-4">Add shortcut to Drive</p>
+                </div>
+                <!-- trash -->
+                <div class="menu-item">
+                  <div class="w-4 h-4">
+                    <i class="fa-solid fa-trash-can text-[15px]"></i>
+                  </div>
+                  <p class="flex-1 h-4">Move to trash</p>
+                </div>
+              </div>
+              <!-- Seperator -->
+              <hr />
+              <!-- section4  -->
+              <div class="flex flex-col py-2">
+                <!-- Email -->
+                <div class="menu-item group/history">
+                  <div class="w-4 h-4">
+                    <i class="fa-solid fa-clock-rotate-left text-[15px]"></i>
+                  </div>
+                  <p class="flex-1 h-4">Version history</p>
+                  <i class="fa-solid fa-caret-right opacity-65"></i>
+                  <!-- submenu -->
+                  <div
+                    class="menu top-0 left-80 w-75 hidden group-hover/history:block"
+                  >
+                    <div class="menu-item">
+                      <p class="flex-1 h-4">Name current version</p>
+                    </div>
+                    <div class="menu-item">
+                      <p class="flex-1 h-4">See version history</p>
+                      <p class="h-4">Ctrl+Alt+Shift+H</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- move -->
+                <div class="menu-item">
+                  <div class="w-4 h-4">
+                    <i class="fa-regular fa-circle-check text-[15px]"></i>
+                  </div>
+                  <p class="flex-1 h-4">Make available offline</p>
+                </div>
+              </div>
+              <!-- Seperator -->
+              <hr />
+              <!-- section5 -->
+              <div class="flex flex-col py-2">
+                <!-- details -->
+                <div class="menu-item">
+                  <div class="w-4 h-4">
+                    <i class="fa-solid fa-circle-info text-[15px]"></i>
+                  </div>
+                  <p class="flex-1 h-4">Details</p>
+                </div>
+                <!-- setttings -->
+                <div class="menu-item">
+                  <div class="w-4 h-4">
+                    <i class="fa-solid fa-gear text-[15px]"></i>
+                  </div>
+                  <p class="flex-1 h-4">Settings</p>
+                </div>
+              </div>
+              <!-- Seperator -->
+              <hr />
+              <!-- section6 -->
+              <div class="flex flex-col py-2">
+                <!-- details -->
+                <div class="menu-item">
+                  <div class="w-4 h-4">
+                    <i class="fa-solid fa-print text-[15px]"></i>
+                  </div>
+                  <p class="flex-1 h-4">Print</p>
+                  <p class="opacity-70 h-4">Ctrl+P</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ─── Edit  ────────────────── ✣ ─ -->
+          <div class="group relative">
+            <div
+              class="hover:bg-gray-200 px-2.5 py-1 rounded-md cursor-pointer"
+            >
+              Edit
+            </div>
+            <!-- dropdown file menu -->
+            <div class="menu hidden group-hover:block">
+              <!-- section1 -->
+              <div class="flex flex-col py-2">
+                <!-- Undo -->
+                <div class="menu-item">
+                  <div class="w-4 h-4">
+                    <i class="fa-solid fa-undo text-[15px]"></i>
+                  </div>
+                  <p class="flex-1 h-4">Undo</p>
+                  <p class="opacity-65">Ctrl+Z</p>
+                </div>
+                <!-- Redo -->
+                <div class="menu-item">
+                  <div class="w-4 h-4">
+                    <i class="fa-solid fa-redo text-[15px]"></i>
+                  </div>
+                  <p class="flex-1 h-4">Redo</p>
+                  <p class="opacity-65">Ctrl+Y</p>
+                </div>
+              </div>
+              <!-- Seperator -->
+              <hr />
+              <!-- section2 -->
+              <div class="flex flex-col py-2">
+                <!-- Cut -->
+                <div class="menu-item">
+                  <div class="w-4 h-4">
+                    <i class="fa-solid fa-scissors text-[15px]"></i>
+                  </div>
+                  <p class="flex-1 h-4">Cut</p>
+                  <p class="opacity-65">Ctrl+X</p>
+                </div>
+                <!-- Copy -->
+                <div class="menu-item">
+                  <div class="w-4 h-4">
+                    <i class="fa-solid fa-copy text-[15px]"></i>
+                  </div>
+                  <p class="flex-1 h-4">Copy</p>
+                  <p class="opacity-65">Ctrl+C</p>
+                </div>
+                <!-- Paste -->
+                <div class="menu-item">
+                  <div class="w-4 h-4">
+                    <i class="fa-regular fa-clipboard text-[15px]"></i>
+                  </div>
+                  <p class="flex-1 h-4">Paste</p>
+                  <p class="opacity-65">Ctrl+V</p>
+                </div>
+                <!-- Paste Special -->
+                <div class="menu-item group/paste">
+                  <div class="w-4 h-4">
+                    <i class="fa-regular fa-clipboard text-[15px]"></i>
+                  </div>
+                  <p class="flex-1 h-4">Paste special</p>
+                  <i class="fa-solid fa-caret-right opacity-65"></i>
+                  <!-- submenu -->
+                  <div
+                    class="menu top-0 left-80 w-64 hidden group-hover/paste:block"
+                  >
+                    <!-- subsection1 -->
+                    <div class="flex flex-col py-2">
+                      <div class="menu-item">
+                        <p class="flex-1 h-4">Values only</p>
+                        <p class="h-4">Ctrl+Shift+V</p>
+                      </div>
+                      <div class="menu-item">
+                        <p class="flex-1 h-4">Format only</p>
+                        <p class="h-4">Ctrl+Alt+V</p>
+                      </div>
+                      <div class="menu-item">
+                        <p class="flex-1 h-4">Formula only</p>
+                      </div>
+                      <div class="menu-item">
+                        <p class="flex-1 h-4">Conditional formatting only</p>
+                      </div>
+                      <div class="menu-item">
+                        <p class="flex-1 h-4">Data validation only</p>
+                      </div>
+                    </div>
+                    <!-- Seperator -->
+                    <hr />
+                    <!-- subsection2 -->
+                    <div class="flex flex-col py-2">
+                      <div class="menu-item">
+                        <p class="flex-1 h-4">Transposed</p>
+                      </div>
+                    </div>
+                    <!-- Seperator -->
+                    <hr />
+                    <!-- subsection2 -->
+                    <div class="flex flex-col py-2">
+                      <div class="menu-item">
+                        <p class="flex-1 h-4">Column width only</p>
+                      </div>
+                      <div class="menu-item">
+                        <p class="flex-1 h-4">All except borders</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Seperator -->
+              <hr />
+              <!-- section3 -->
+              <div class="flex flex-col py-2">
+                <!-- Move -->
+                <div class="menu-item opacity-60 hover:bg-white">
+                  <div class="w-4 h-4">
+                    <i class="fa-solid fa-up-down-left-right text-[15px]"></i>
+                  </div>
+                  <p class="flex-1 h-4">Move</p>
+                  <i class="fa-solid fa-caret-right opacity-65"></i>
+                </div>
+                <!-- Delete -->
+                <div class="menu-item group/delete">
+                  <div class="w-4 h-4">
+                    <i class="fa-solid fa-trash-can text-[15px]"></i>
+                  </div>
+                  <p class="flex-1 h-4">Delete</p>
+                  <i class="fa-solid fa-caret-right opacity-65"></i>
+                  <!-- submenu -->
+                  <div
+                    class="menu top-0 left-80 w-64 hidden group-hover/delete:block"
+                  >
+                    <!-- subsection1 -->
+                    <div class="flex flex-col py-2">
+                      <div class="menu-item">
+                        <p class="flex-1 h-4">Values</p>
+                      </div>
+                      <div class="menu-item">
+                        <p class="flex-1 h-4">
+                          Row <span class="font-semibold">1</span>
+                        </p>
+                      </div>
+                      <div class="menu-item">
+                        <p class="flex-1 h-4">
+                          Column <span class="font-semibold">A</span>
+                        </p>
+                      </div>
+                      <div class="menu-item">
+                        <p class="flex-1 h-4">
+                          Cells and <span class="font-semibold">shift up</span>
+                        </p>
+                      </div>
+                      <div class="menu-item">
+                        <p class="flex-1 h-4">
+                          Cells and
+                          <span class="font-semibold">shift left</span>
+                        </p>
+                      </div>
+                      <div class="menu-item">
+                        <p class="flex-1 h-4">Notes</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Seperator -->
+              <hr />
+              <!-- section4  -->
+              <div class="flex flex-col py-2">
+                <!-- Find and replace -->
+                <div class="menu-item">
+                  <div class="w-4 h-4">
+                    <i class="fa-solid fa-rotate text-[15px]"></i>
+                  </div>
+                  <p class="flex-1 h-4">Find and replace</p>
+                  <p class="opacity-65">Ctrl+H</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ─── View  ────────────────── ✣ ─ -->
+          <div class="group relative">
+            <div
+              class="hover:bg-gray-200 px-2.5 py-1 rounded-md cursor-pointer"
+            >
+              View
+            </div>
+            <!-- dropdown view menu -->
+            <div class="menu hidden group-hover:block">
+              <!-- section1 -->
+              <div class="flex flex-col py-2">
+                <!-- Show -->
+                <div class="menu-item group/show">
+                  <div class="w-4 h-4">
+                    <i class="fa-regular fa-eye text-[15px]"></i>
+                  </div>
+                  <p class="flex-1 h-4">Show</p>
+                  <i class="fa-solid fa-caret-right opacity-65"></i>
+                  <!-- submenu -->
+                  <div
+                    class="menu top-0 left-80 w-64 hidden group-hover/show:block"
+                  >
+                    <!-- subsection1 -->
+                    <div class="flex flex-col py-2">
+                      <div class="menu-item">
+                        <div class="w-4 h-4">
+                          <i class="fa-solid fa-check text-[15px]"></i>
+                        </div>
+                        <p class="flex-1 h-4">Formula bar</p>
+                      </div>
+                      <div class="menu-item">
+                        <div class="w-4 h-4">
+                          <i class="fa-solid fa-check text-[15px]"></i>
+                        </div>
+                        <p class="flex-1 h-4">Gridlines</p>
+                      </div>
+                      <div class="menu-item">
+                        <div class="w-4 h-4"></div>
+                        <p class="flex-1 h-4">Formulas</p>
+                        <p class="h-4">Ctrl+`</p>
+                      </div>
+                      <div class="menu-item">
+                        <div class="w-4 h-4"></div>
+                        <p class="flex-1 h-4">Protected ranges</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Freeze -->
+                <div class="menu-item group/freeze">
+                  <div class="w-4 h-4">
+                    <i class="fa-solid fa-arrow-down-up-lock text-[15px]"></i>
+                  </div>
+                  <p class="flex-1 h-4">Freeze</p>
+                  <i class="fa-solid fa-caret-right opacity-65"></i>
+                  <!-- submenu -->
+                  <div
+                    class="menu top-0 left-80 w-64 hidden group-hover/freeze:block"
+                  >
+                    <!-- subsection1 -->
+                    <div class="flex flex-col py-2">
+                      <div class="menu-item">
+                        <p class="flex-1 h-4">No rows</p>
+                      </div>
+                      <div class="menu-item">
+                        <p class="flex-1 h-4">1 row</p>
+                      </div>
+                      <div class="menu-item">
+                        <p class="flex-1 h-4">2 row</p>
+                      </div>
+                      <div class="menu-item">
+                        <p class="flex-1 h-4">
+                          Up to <span class="font-semibold">row 1</span>
+                        </p>
+                      </div>
+                    </div>
+                    <!-- Seperator -->
+                    <hr />
+                    <!-- subsection2 -->
+                    <div class="flex flex-col py-2">
+                      <div class="menu-item">
+                        <p class="flex-1 h-4">No column</p>
+                      </div>
+                      <div class="menu-item">
+                        <p class="flex-1 h-4">1 column</p>
+                      </div>
+                      <div class="menu-item">
+                        <p class="flex-1 h-4">2 columns</p>
+                      </div>
+                      <div class="menu-item">
+                        <p class="flex-1 h-4">
+                          Up to <span class="font-semibold">column A</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Group -->
+                <div class="menu-item group/group">
+                  <div class="w-4 h-4">
+                    <i class="fa-regular fa-square-plus text-[15px]"></i>
+                  </div>
+                  <p class="flex-1 h-4">Group</p>
+                  <i class="fa-solid fa-caret-right opacity-65"></i>
+                  <!-- submenu -->
+                  <div
+                    class="menu top-0 left-80 w-64 hidden group-hover/group:block"
+                  >
+                    <!-- subsection1 -->
+                    <div class="flex flex-col py-2">
+                      <div class="menu-item">
+                        <p class="flex-1 h-4">Group</p>
+                        <p class="h-4">
+                          Alt+Shift+<i class="fa-solid fa-arrow-right"></i>
+                        </p>
+                      </div>
+                      <div class="menu-item hover:bg-white opacity-60">
+                        <p class="flex-1 h-4">Ungroup</p>
+                        <p class="h-4">
+                          Alt+Shift+<i class="fa-solid fa-arrow-left"></i>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Seperator -->
+              <hr />
+              <!-- section3 -->
+              <div class="flex flex-col py-2">
+                <!-- Hidden sheets -->
+                <div class="menu-item opacity-60 hover:bg-white">
+                  <div class="w-4 h-4">
+                    <i class="fa-solid fa-eye-slash text-[15px]"></i>
+                  </div>
+                  <p class="flex-1 h-4">Hidden sheets</p>
+                  <i class="fa-solid fa-caret-right opacity-65"></i>
+                </div>
+              </div>
+              <!-- Seperator -->
+              <hr />
+              <!-- section4  -->
+              <div class="flex flex-col py-2">
+                <!-- Zoom -->
+                <div class="menu-item group/zoom">
+                  <div class="w-4 h-4">
+                    <i
+                      class="fa-solid fa-magnifying-glass-plus text-[15px]"
+                    ></i>
+                  </div>
+                  <p class="flex-1 h-4">Zoom</p>
+                  <i class="fa-solid fa-caret-right opacity-65"></i>
+                  <!-- submenu /zoom-->
+                  <div
+                    class="menu top-0 left-80 w-24 hidden group-hover/zoom:block"
+                  >
+                    <!-- subsection1/zoom -->
+                    <div class="flex flex-col py-2">
+                      <div class="menu-item">
+                        <div class="w-4 h-4"></div>
+                        <p class="flex-1 h-4">50%</p>
+                      </div>
+                      <div class="menu-item">
+                        <div class="w-4 h-4"></div>
+                        <p class="flex-1 h-4">75%</p>
+                      </div>
+                      <div class="menu-item">
+                        <div class="w-4 h-4"></div>
+                        <p class="flex-1 h-4">90%</p>
+                      </div>
+                      <div class="menu-item">
+                        <div class="w-4 h-4">
+                          <i class="fa-solid fa-check text-[15px]"></i>
+                        </div>
+                        <p class="flex-1 h-4">100%</p>
+                      </div>
+                      <div class="menu-item">
+                        <div class="w-4 h-4"></div>
+                        <p class="flex-1 h-4">125%</p>
+                      </div>
+                      <div class="menu-item">
+                        <div class="w-4 h-4"></div>
+                        <p class="flex-1 h-4">150%</p>
+                      </div>
+                      <div class="menu-item">
+                        <div class="w-4 h-4"></div>
+                        <p class="flex-1 h-4">200%</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="menu-item">
+                  <i class="fa-solid fa-expand text-[15px]"></i>
+                  <p class="flex-1 h-4">Full screen</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ─── Insert ────────────────── ✣ ─ -->
+          <div class="group relative">
+            <div
+              class="hover:bg-gray-200 px-2.5 py-1 rounded-md cursor-pointer"
+            >
+              Insert
+            </div>
+            <!-- dropdown file menu -->
+            <div class="menu hidden group-hover:block">
+              <!-- section1 -->
+              <div class="flex flex-col py-2">
+                <!-- Cells/insert -->
+                <div class="menu-item group/cells">
+                  <div class="w-4 h-4">
+                    <i class="fa-regular fa-square text-[15px]"></i>
+                  </div>
+                  <p class="flex-1 h-4">Cells</p>
+                  <i class="fa-solid fa-caret-right opacity-65"></i>
+                  <!-- submenu -->
+                  <div
+                    class="menu top-0 left-80 w-56 hidden group-hover/cells:block"
+                  >
+                    <div class="menu-item">
+                      <p class="flex-1 h-4">Insert cells and shift right</p>
+                    </div>
+                    <div class="menu-item">
+                      <p class="flex-1 h-4">Insert cells and shift down</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Rows/insert -->
+                <div class="menu-item group/rows">
+                  <div class="w-4 h-4">
+                    <i class="fa-solid fa-table-list text-[15px]"></i>
+                  </div>
+                  <p class="flex-1 h-4">Rows</p>
+                  <i class="fa-solid fa-caret-right opacity-65"></i>
+                  <!-- submenu -->
+                  <div
+                    class="menu top-0 left-80 w-56 hidden group-hover/rows:block"
+                  >
+                    <div class="menu-item">
+                      <p class="flex-1 h-4">
+                        Insert <span class="font-semibold">1 row</span> above
+                      </p>
+                    </div>
+                    <div class="menu-item">
+                      <p class="flex-1 h-4">
+                        Insert <span class="font-semibold">1 row</span> below
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- COlumns/insert -->
+                <div class="menu-item group/column">
+                  <div class="w-4 h-4">
+                    <i class="fa-solid fa-table-columns text-[15px]"></i>
+                  </div>
+                  <p class="flex-1 h-4">Columns</p>
+                  <i class="fa-solid fa-caret-right opacity-65"></i>
+                  <!-- submenu -->
+                  <div
+                    class="menu top-0 left-80 w-56 hidden group-hover/column:block"
+                  >
+                    <div class="menu-item">
+                      <p class="flex-1 h-4">
+                        Insert <span class="font-semibold">1 column</span> left
+                      </p>
+                    </div>
+                    <div class="menu-item">
+                      <p class="flex-1 h-4">
+                        Insert <span class="font-semibold">1 column</span> right
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- sheet /insert-->
+                <div class="menu-item">
+                  <div class="w-4 h-4">
+                    <i class="fa-solid fa-sheet-plastic text-[15px]"></i>
+                  </div>
+                  <p class="flex-1 h-4">Sheet</p>
+                  <p class="opacity-65">Shift+F11</p>
+                </div>
+              </div>
+              <!-- Seperator -->
+              <hr />
+              <!-- section2 -->
+              <div class="flex flex-col py-2">
+                <!-- chart /insert-->
+                <div class="menu-item">
+                  <div class="w-4 h-4">
+                    <i class="fa-solid fa-chart-column text-[15px]"></i>
+                  </div>
+                  <p class="flex-1 h-4">Chart</p>
+                </div>
+                <!-- Pivot table /insert-->
+                <div class="menu-item">
+                  <div class="w-4 h-4">
+                    <i class="fa-solid fa-table-cells text-[15px]"></i>
+                  </div>
+                  <p class="flex-1 h-4">Pivot table</p>
+                </div>
+                <!-- Image/insert -->
+                <div class="menu-item group/download">
+                  <div class="w-4 h-4">
+                    <i class="fa-solid fa-image text-[15px]"></i>
+                  </div>
+                  <p class="flex-1 h-4">Image</p>
+                  <i class="fa-solid fa-caret-right opacity-65"></i>
+                  <!-- submenu -->
+                  <div
+                    class="menu top-0 left-80 w-64 hidden group-hover/download:block"
+                  >
+                    <div class="menu-item">
+                      <p class="flex-1 h-4">Insert image in cell</p>
+                    </div>
+                    <div class="menu-item">
+                      <p class="flex-1 h-4">Insert image over cell</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Drawing /insert-->
+                <div class="menu-item">
+                  <div class="w-4 h-4">
+                    <i class="fa-solid fa-paint-brush text-[15px]"></i>
+                  </div>
+                  <p class="flex-1 h-4">Drawing</p>
+                </div>
+              </div>
+              <!-- Seperator -->
+              <hr />
+              <!-- section3 -->
+              <div class="flex flex-col py-2">
+                <!-- Function/insert -->
+                <div class="menu-item group/download">
+                  <div class="w-4 h-4">
+                    <img
+                      src="./assets/functions_FILL0_wght400_GRAD0_opsz24.png"
+                      alt=""
+                      class="w-4 h-4"
+                    />
+                  </div>
+                  <p class="flex-1 h-4">Function</p>
+                  <i class="fa-solid fa-caret-right opacity-65"></i>
+                  <!-- submenu -->
+                  <div
+                    class="menu top-0 left-80 w-64 hidden group-hover/download:block"
+                  >
+                    <div class="menu-item">
+                      <p class="flex-1 h-4">SUM</p>
+                    </div>
+                    <div class="menu-item">
+                      <p class="flex-1 h-4">AVERAGE</p>
+                    </div>
+                    <div class="menu-item">
+                      <p class="flex-1 h-4">COUNT</p>
+                    </div>
+                    <div class="menu-item">
+                      <p class="flex-1 h-4">MAX</p>
+                    </div>
+                    <div class="menu-item">
+                      <p class="flex-1 h-4">MIN</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- link /insert-->
+                <div class="menu-item">
+                  <div class="w-4 h-4">
+                    <i class="fa-solid fa-link text-[15px]"></i>
+                  </div>
+                  <p class="flex-1 h-4">Link</p>
+                  <p class="opacity-65">Ctrl+K</p>
+                </div>
+              </div>
+              <!-- Seperator -->
+              <hr />
+              <!-- section4  -->
+              <div class="flex flex-col py-2">
+                <!-- checkbox -->
+                <div class="menu-item">
+                  <div class="w-4 h-4">
+                    <i class="fa-regular fa-square-check text-[15px]"></i>
+                  </div>
+                  <p class="flex-1 h-4">Checkbox</p>
+                </div>
+                <!-- dropdown -->
+                <div class="menu-item">
+                  <div class="w-4 h-4">
+                    <i class="fa-regular fa-square-caret-down text-[15px]"></i>
+                  </div>
+                  <p class="flex-1 h-4">Dropdown</p>
+                </div>
+                <!-- emoji -->
+                <div class="menu-item">
+                  <div class="w-4 h-4">
+                    <i class="fa-regular fa-face-smile text-[15px]"></i>
+                  </div>
+                  <p class="flex-1 h-4">Emoji</p>
+                </div>
+                <!-- smart chips -->
+                <div class="menu-item group/smart">
+                  <div class="w-4 h-4">
+                    <i class="fa-solid fa-diagram-predecessor text-[15px]"></i>
+                  </div>
+                  <p class="flex-1 h-4">Smart chips</p>
+                  <div class="w-2 h-2 rounded bg-green-700"></div>
+                  <i class="fa-solid fa-caret-right opacity-65"></i>
+                  <!-- submenu -->
+                  <div
+                    class="menu top-0 left-80 w-75 hidden group-hover/smart:block"
+                  >
+                    <div class="menu-item">
+                      <p class="flex-1 h-4">People</p>
+                    </div>
+                    <div class="menu-item">
+                      <p class="flex-1 h-4">File</p>
+                    </div>
+                    <div class="menu-item">
+                      <p class="flex-1 h-4">Caleder Events</p>
+                    </div>
+                    <div class="menu-item">
+                      <p class="flex-1 h-4">Place</p>
+                    </div>
+                    <div class="menu-item">
+                      <p class="flex-1 h-4">Finance</p>
+                    </div>
+                    <div class="menu-item">
+                      <p class="flex-1 h-4">Ratings</p>
+                      <p class="h-4.5 px-2  bg-green-700 rounded-full text-white font-medium">new</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Seperator -->
+              <hr />
+              <!-- section5 -->
+              <div class="flex flex-col py-2">
+                <!-- comment -->
+                <div class="menu-item">
+                  <div class="w-4 h-4">
+                    <i class="fa-regular fa-message text-[15px]"></i>
+                  </div>
+                  <p class="flex-1 h-4">Comment</p>
+                  <p class="opacity-70 h-4">Ctrl+Alt+M</p>
+                </div>
+                <!-- Note -->
+                <div class="menu-item">
+                  <div class="w-4 h-4">
+                    <i class="fa-regular fa-note-sticky text-[15px]"></i>
+                  </div>
+                  <p class="flex-1 h-4">Note</p>
+                  <p class="opacity-70 h-4">Shift+F2</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ─── Format ────────────────── ✣ ─ -->
+          <div class="hover:bg-gray-200 px-2.5 py-1 rounded-md cursor-pointer">
+            Format
+          </div>
+          <!-- ─── Data ────────────────── ✣ ─ -->
+          <div class="hover:bg-gray-200 px-2.5 py-1 rounded-md cursor-pointer">
+            Data
+          </div>
+          <!-- ─── Tools ────────────────── ✣ ─ -->
+          <div class="hover:bg-gray-200 px-2.5 py-1 rounded-md cursor-pointer">
+            Tools
+          </div>
+          <!-- ─── Extensions ────────────────── ✣ ─ -->
+          <div class="hover:bg-gray-200 px-2.5 py-1 rounded-md cursor-pointer">
+            Extensions
+          </div>
+          <!-- ─── Help ────────────────── ✣ ─ -->
+          <div class="hover:bg-gray-200 px-2.5 py-1 rounded-md cursor-pointer">
+            Help
+          </div>
+        </div>
+      </div>
+      <!-- ─── Right-container ─────────────────────── ✣ ─ -->
+      <div class="flex gap-1 bg-white py-2 min-w-max z-50">
+        <!-- ─── Last Edit ───────────────────── ✣ ─ -->
+        <div
+          class="hover:bg-gray-200 p-2 rounded-full cursor-pointer group relative"
+        >
+          <img src="./assets/restore_black_24dp.svg" alt="" class="w-6 h-6" />
+          <div class="-left-[120%] tooltip">Last edit was 3 days ago</div>
+        </div>
+        <!-- ─── Comments ───────────────────── ✣ ─ -->
+        <div
+          class="hover:bg-gray-200 p-2 rounded-full cursor-pointer group relative"
+        >
+          <img src="./assets/comment_black_24dp.svg" alt="" class="w-6 h-6" />
+          <div class="-left-[220%] tooltip">
+            Open comments history (Ctrl+Shift+Alt+A)
+          </div>
+        </div>
+        <!-- ─── meet ────────────────────── ✣ ─ -->
+        <div
+          class="flex items-center gap-2 hover:bg-gray-200 py-2 px-2.5 rounded-full cursor-pointer group relative"
+        >
+          <img src="./assets/google-meet.svg" alt="" class="w-6 h-6" />
+          <i class="fa-solid fa-caret-down text-sm"></i>
+          <div class="-left-[120%] tooltip">
+            Join a call or present this tab to a call
+          </div>
+        </div>
+        <!-- ─── Share ────────────────────── ✣ ─ -->
+        <div class="flex gap-0.5">
+          <div
+            class="flex items-center gap-1 bg-sky-200 hover:bg-[#b2d7ef] py-2 pl-5 pr-3 border-r-white rounded-l-full cursor-pointer group relative"
+          >
+            <div class="w-6 h-6 flex items-center">
+              <img
+                src="./assets/lock_FILL0_wght400_GRAD0_opsz24.svg"
+                alt=""
+                class="w-4 h-4"
+              />
+            </div>
+
+            <p class="font-medium">Share</p>
+            <div class="tooltip -left-0">Private to only me</div>
+          </div>
+          <div
+            class="flex items-center bg-sky-200 hover:bg-[#b2d7ef] py-2 px-4 rounded-r-full cursor-pointer group relative"
+          >
+            <i class="fa-solid fa-caret-down text-sm"></i>
+            <div class="tooltip -left-[120%]">Open sharing actions</div>
+          </div>
+        </div>
+        <!-- ─── Profile Pic────────────────────── ✣ ─ -->
+        <div
+          class="w-10 mx-3 border-[3px] rounded-full border-t-red-600 border-l-orange-400 border-b-green-700 border-r-blue-700 group relative"
+        >
+          <img
+            src="./assets/dp.jpg"
+            alt=""
+            class="w-full rounded-full cursor-pointer"
+          />
+          <div class="tooltip -bottom-[200%] -left-[230%] opacity-65">
+            Google Account <br />
+            Amit Kumar <br />
+            amitojj@gmail.com
+          </div>
+        </div>
+      </div>
+    </nav>
+  </body>
+</html>

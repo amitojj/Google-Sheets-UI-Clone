@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .tooltip {
+    @apply hidden group-hover:block absolute  min-w-max  text-xs bg-black text-white px-2 py-1 rounded -bottom-8
+  }
+
+  .menu {
+    @apply absolute left-0 bg-white w-80 min-h-max shadow-[0_0_7px_0_rgba(0,0,0,0.2)] text-black flex flex-col
+  }
+  .menu-item {
+    @apply flex justify-between items-center gap-3 px-4 py-2.5 hover:bg-[rgba(0,0,0,0.04)]  relative cursor-pointer
+  }
+
+}
