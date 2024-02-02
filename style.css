@@ -8,7 +8,7 @@
   }
 
   .menu {
-    @apply absolute left-0 bg-white w-80  shadow-[0_0_7px_0_rgba(0,0,0,0.2)] text-black flex flex-col  
+    @apply absolute left-0 bg-white w-80  shadow-[0_0_7px_0_rgba(0,0,0,0.2)] text-black flex flex-col  z-50
   }
   .menu-item {
     @apply flex justify-between items-center gap-3 px-4 py-0.5 xl:py-1 2xl:py-2 hover:bg-[rgba(0,0,0,0.04)]  relative cursor-pointer
@@ -22,5 +22,7 @@
   .sect {
     @apply flex flex-col py-2
   }
-
+  .icons {
+    @apply relative hover:bg-[#e0e5eb] py-1.5 px-2
+  }
 }
