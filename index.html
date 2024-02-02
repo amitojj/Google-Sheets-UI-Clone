@@ -13,7 +13,7 @@
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
       rel="stylesheet"
     />
     <link
@@ -33,7 +33,9 @@
     </style>
   </head>
 
-  <body class="font-rob flex w-screen h-screen flex-col max-h-screen overflow-hidden">
+  <body
+    class="font-rob flex w-screen h-screen flex-col max-h-screen overflow-hidden"
+  >
     <!-- ─── Navbar ──────────────────────────────────────────────────────── ✣ ─ -->
     <nav class="navbar flex justify-between items-center h-16 max-h-16">
       <!-- ───sheets Logo ────────────────────────────────────────────────── ✣ ─ -->
@@ -56,7 +58,7 @@
           <div class="group relative">
             <input
               type="text"
-              class="text-base xl:text-lg hover:border border-black pl-2 px-0 h-7 rounded-md"
+              class="text-sm 2xl:text-lg hover:border border-black pl-2 px-0 h-7 rounded-md"
               value="Untitled spreadsheet"
             />
             <!-- tooltip -->
@@ -97,7 +99,9 @@
           </div>
         </div>
         <!-- lower-row -->
-        <div class="flex items-center text-xs xl:text-sm flex-shrink-0 min-w-max">
+        <div
+          class="flex items-center text-[10px] 2xl:text-sm flex-shrink-0 min-w-max"
+        >
           <!-- ─── File ────────────────── ✣ ─ -->
           <div class="group relative">
             <div
@@ -106,9 +110,9 @@
               File
             </div>
             <!-- dropdown file menu -->
-            <div class="menu hidden  group-hover:block   ">
+            <div class="menu hidden group-hover:block">
               <!-- section1 -->
-              <div class="menu-sec">
+              <div class="sect">
                 <!-- new -->
                 <div class="menu-item group/new">
                   <div class="icon-size">
@@ -172,7 +176,7 @@
               <!-- Seperator -->
               <hr />
               <!-- section2 -->
-              <div class="menu-sec">
+              <div class="sect">
                 <!-- Share -->
                 <div class="menu-item group/share">
                   <div class="icon-size">
@@ -252,7 +256,7 @@
               <!-- Seperator -->
               <hr />
               <!-- section3 -->
-              <div class="menu-sec">
+              <div class="sect">
                 <!-- rename -->
                 <div class="menu-item">
                   <div class="icon-size">
@@ -285,7 +289,7 @@
               <!-- Seperator -->
               <hr />
               <!-- section4  -->
-              <div class="menu-sec">
+              <div class="sect">
                 <!-- Email -->
                 <div class="menu-item group/history">
                   <div class="icon-size">
@@ -317,7 +321,7 @@
               <!-- Seperator -->
               <hr />
               <!-- section5 -->
-              <div class="menu-sec">
+              <div class="sect">
                 <!-- details -->
                 <div class="menu-item">
                   <div class="icon-size">
@@ -336,7 +340,7 @@
               <!-- Seperator -->
               <hr />
               <!-- section6 -->
-              <div class="menu-sec">
+              <div class="sect">
                 <!-- details -->
                 <div class="menu-item">
                   <div class="icon-size">
@@ -358,7 +362,7 @@
             <!-- dropdown file menu -->
             <div class="menu hidden group-hover:block">
               <!-- section1 -->
-              <div class="menu-sec">
+              <div class="sect">
                 <!-- Undo -->
                 <div class="menu-item">
                   <div class="icon-size">
@@ -379,7 +383,7 @@
               <!-- Seperator -->
               <hr />
               <!-- section2 -->
-              <div class="menu-sec">
+              <div class="sect">
                 <!-- Cut -->
                 <div class="menu-item">
                   <div class="icon-size">
@@ -416,7 +420,7 @@
                     class="menu top-0 left-80 w-64 hidden group-hover/paste:block"
                   >
                     <!-- subsection1 -->
-                    <div class="menu-sec">
+                    <div class="sect">
                       <div class="menu-item">
                         <p class="flex-1 h-4">Values only</p>
                         <p class="h-4">Ctrl+Shift+V</p>
@@ -438,7 +442,7 @@
                     <!-- Seperator -->
                     <hr />
                     <!-- subsection2 -->
-                    <div class="menu-sec">
+                    <div class="sect">
                       <div class="menu-item">
                         <p class="flex-1 h-4">Transposed</p>
                       </div>
@@ -446,7 +450,7 @@
                     <!-- Seperator -->
                     <hr />
                     <!-- subsection2 -->
-                    <div class="menu-sec">
+                    <div class="sect">
                       <div class="menu-item">
                         <p class="flex-1 h-4">Column width only</p>
                       </div>
@@ -460,11 +464,13 @@
               <!-- Seperator -->
               <hr />
               <!-- section3 -->
-              <div class="menu-sec">
+              <div class="sect">
                 <!-- Move -->
                 <div class="menu-item opacity-30 hover:bg-white">
                   <div class="icon-size">
-                    <i class="fa-solid fa-up-down-left-right i-size opacity-30"></i>
+                    <i
+                      class="fa-solid fa-up-down-left-right i-size opacity-30"
+                    ></i>
                   </div>
                   <p class="flex-1 h-4">Move</p>
                   <i class="fa-solid fa-caret-right opacity-65"></i>
@@ -481,7 +487,7 @@
                     class="menu top-0 left-80 w-64 hidden group-hover/delete:block"
                   >
                     <!-- subsection1 -->
-                    <div class="menu-sec">
+                    <div class="sect">
                       <div class="menu-item">
                         <p class="flex-1 h-4">Values</p>
                       </div>
@@ -516,7 +522,7 @@
               <!-- Seperator -->
               <hr />
               <!-- section4  -->
-              <div class="menu-sec">
+              <div class="sect">
                 <!-- Find and replace -->
                 <div class="menu-item">
                   <div class="icon-size">
@@ -538,7 +544,7 @@
             <!-- dropdown view menu -->
             <div class="menu hidden group-hover:block">
               <!-- section1 -->
-              <div class="menu-sec">
+              <div class="sect">
                 <!-- Show -->
                 <div class="menu-item group/show">
                   <div class="icon-size">
@@ -551,7 +557,7 @@
                     class="menu top-0 left-80 w-64 hidden group-hover/show:block"
                   >
                     <!-- subsection1 -->
-                    <div class="menu-sec">
+                    <div class="sect">
                       <div class="menu-item">
                         <div class="icon-size">
                           <i class="fa-solid fa-check i-size"></i>
@@ -588,7 +594,7 @@
                     class="menu top-0 left-80 w-64 hidden group-hover/freeze:block"
                   >
                     <!-- subsection1 -->
-                    <div class="menu-sec">
+                    <div class="sect">
                       <div class="menu-item">
                         <p class="flex-1 h-4">No rows</p>
                       </div>
@@ -607,7 +613,7 @@
                     <!-- Seperator -->
                     <hr />
                     <!-- subsection2 -->
-                    <div class="menu-sec">
+                    <div class="sect">
                       <div class="menu-item">
                         <p class="flex-1 h-4">No column</p>
                       </div>
@@ -637,7 +643,7 @@
                     class="menu top-0 left-80 w-64 hidden group-hover/group:block"
                   >
                     <!-- subsection1 -->
-                    <div class="menu-sec">
+                    <div class="sect">
                       <div class="menu-item">
                         <p class="flex-1 h-4">Group</p>
                         <p class="h-4">
@@ -657,7 +663,7 @@
               <!-- Seperator -->
               <hr />
               <!-- section3 -->
-              <div class="menu-sec">
+              <div class="sect">
                 <!-- Hidden sheets -->
                 <div class="menu-item opacity-30 hover:bg-white">
                   <div class="icon-size">
@@ -670,13 +676,11 @@
               <!-- Seperator -->
               <hr />
               <!-- section4  -->
-              <div class="menu-sec">
+              <div class="sect">
                 <!-- Zoom -->
                 <div class="menu-item group/zoom">
                   <div class="icon-size">
-                    <i
-                      class="fa-solid fa-magnifying-glass-plus i-size"
-                    ></i>
+                    <i class="fa-solid fa-magnifying-glass-plus i-size"></i>
                   </div>
                   <p class="flex-1 h-4">Zoom</p>
                   <i class="fa-solid fa-caret-right opacity-65"></i>
@@ -685,7 +689,7 @@
                     class="menu top-0 left-80 w-24 hidden group-hover/zoom:block"
                   >
                     <!-- subsection1/zoom -->
-                    <div class="menu-sec">
+                    <div class="sect">
                       <div class="menu-item">
                         <div class="icon-size"></div>
                         <p class="flex-1 h-4">50%</p>
@@ -736,7 +740,7 @@
             <!-- dropdown file menu -->
             <div class="menu hidden group-hover:block">
               <!-- section1 -->
-              <div class="menu-sec">
+              <div class="sect">
                 <!-- Cells/insert -->
                 <div class="menu-item group/cells">
                   <div class="icon-size">
@@ -814,7 +818,7 @@
               <!-- Seperator -->
               <hr />
               <!-- section2 -->
-              <div class="menu-sec">
+              <div class="sect">
                 <!-- chart /insert-->
                 <div class="menu-item">
                   <div class="icon-size">
@@ -859,7 +863,7 @@
               <!-- Seperator -->
               <hr />
               <!-- section3 -->
-              <div class="menu-sec">
+              <div class="sect">
                 <!-- Function/insert -->
                 <div class="menu-item group/download">
                   <div class="icon-size">
@@ -904,7 +908,7 @@
               <!-- Seperator -->
               <hr />
               <!-- section4  -->
-              <div class="menu-sec">
+              <div class="sect">
                 <!-- checkbox -->
                 <div class="menu-item">
                   <div class="icon-size">
@@ -955,7 +959,11 @@
                     </div>
                     <div class="menu-item">
                       <p class="flex-1 h-4">Ratings</p>
-                      <p class="h-4.5 px-2  bg-green-700 rounded-full text-white font-medium">new</p>
+                      <p
+                        class="h-4.5 px-2 bg-green-700 rounded-full text-white font-medium"
+                      >
+                        new
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -963,7 +971,7 @@
               <!-- Seperator -->
               <hr />
               <!-- section5 -->
-              <div class="menu-sec">
+              <div class="sect">
                 <!-- comment -->
                 <div class="menu-item">
                   <div class="icon-size">
@@ -984,24 +992,1045 @@
             </div>
           </div>
           <!-- ─── Format ────────────────── ✣ ─ -->
-          <div class="hover:bg-gray-200 px-2.5 py-1 rounded-md cursor-pointer">
-            Format
+          <div class="group relative">
+            <div
+              class="hover:bg-gray-200 px-2.5 py-1 rounded-md cursor-pointer"
+            >
+              Format
+            </div>
+            <!-- dropdown file menu -->
+            <div class="menu hidden group-hover:block">
+              <!-- section0 -->
+              <div class="sect">
+                <!-- theme /format-->
+                <div class="menu-item">
+                  <div class="icon-size">
+                    <i class="fa-solid fa-palette i-size"></i>
+                  </div>
+                  <p class="flex-1 h-4">Theme</p>
+                </div>
+              </div>
+              <!-- Seperator -->
+              <hr />
+              <div class="sect">
+                <!-- Number/Format -->
+                <div class="menu-item group/rows">
+                  <div class="icon-size">
+                    <img
+                      src="./assets/pin_FILL0_wght400_GRAD0_opsz20.png"
+                      alt=""
+                      class=""
+                    />
+                  </div>
+                  <p class="flex-1 h-4">Number</p>
+                  <i class="fa-solid fa-caret-right opacity-65"></i>
+                  <!-- submenu -->
+                  <div
+                    class="menu top-0 left-80 w-72 hidden group-hover/rows:block"
+                  >
+                    <!-- subsection1 -->
+                    <div class="sect">
+                      <div class="menu-item">
+                        <div class="icon-size">
+                          <i class="fa-solid fa-check i-size"></i>
+                        </div>
+                        <p class="flex-1 h-4">Automatic</p>
+                      </div>
+                      <div class="menu-item">
+                        <div class="icon-size"></div>
+                        <p class="flex-1 h-4">Plain text</p>
+                      </div>
+                    </div>
+                    <!-- Seperator -->
+                    <hr />
+                    <!-- subsection2 -->
+                    <div class="sect">
+                      <div class="menu-item">
+                        <div class="icon-size"></div>
+                        <p class="flex-1 h-4">Number</p>
+                        <p class="h-4 font-medium">1,000.12</p>
+                      </div>
+                      <div class="menu-item">
+                        <div class="icon-size"></div>
+                        <p class="flex-1 h-4">Percent</p>
+                        <p class="h-4 font-medium">10.12%</p>
+                      </div>
+                      <div class="menu-item">
+                        <div class="icon-size"></div>
+                        <p class="flex-1 h-4">Scientific</p>
+                        <p class="h-4 font-medium">1.01E+03</p>
+                      </div>
+                    </div>
+                    <!-- Seperator -->
+                    <hr />
+                    <!-- subsection3 -->
+                    <div class="sect">
+                      <div class="menu-item">
+                        <div class="icon-size"></div>
+                        <p class="flex-1 h-4">Accounting</p>
+                        <p class="h-4 font-medium">$ (1,000.12)</p>
+                      </div>
+                      <div class="menu-item">
+                        <div class="icon-size"></div>
+                        <p class="flex-1 h-4">Financial</p>
+                        <p class="h-4 font-medium">(1,000.12)</p>
+                      </div>
+                      <div class="menu-item">
+                        <div class="icon-size"></div>
+                        <p class="flex-1 h-4">Currency</p>
+                        <p class="h-4 font-medium">$1,000.12</p>
+                      </div>
+                      <div class="menu-item">
+                        <div class="icon-size"></div>
+                        <p class="flex-1 h-4">Currency rounded</p>
+                        <p class="h-4 font-medium">$1,000</p>
+                      </div>
+                    </div>
+                    <!-- Seperator -->
+                    <hr />
+                    <!-- subsection4 -->
+                    <div class="sect">
+                      <div class="menu-item">
+                        <div class="icon-size"></div>
+                        <p class="flex-1 h-4">Date</p>
+                        <p class="h-4 font-medium">9/26/2008</p>
+                      </div>
+                      <div class="menu-item">
+                        <div class="icon-size"></div>
+                        <p class="flex-1 h-4">Time</p>
+                        <p class="h-4 font-medium">3:59:00 PM</p>
+                      </div>
+                      <div class="menu-item">
+                        <div class="icon-size"></div>
+                        <p class="flex-1 h-4">Date time</p>
+                        <p class="h-4 font-medium">9/26/2008 15:59:00</p>
+                      </div>
+                      <div class="menu-item">
+                        <div class="icon-size"></div>
+                        <p class="flex-1 h-4">Duration</p>
+                        <p class="h-4 font-medium">24:01:00</p>
+                      </div>
+                    </div>
+                    <!-- Seperator -->
+                    <hr />
+                    <!-- subsection5 -->
+                    <div class="sect">
+                      <div class="menu-item">
+                        <div class="icon-size"></div>
+                        <p class="flex-1 h-4">9/26/2008</p>
+                      </div>
+                    </div>
+                    <!-- Seperator -->
+                    <hr />
+                    <!-- subsection5 -->
+                    <div class="sect">
+                      <div class="menu-item">
+                        <div class="icon-size"></div>
+                        <p class="flex-1 h-4">Custom currency</p>
+                      </div>
+                      <div class="menu-item">
+                        <div class="icon-size"></div>
+                        <p class="flex-1 h-4">Custom date and time</p>
+                      </div>
+                      <div class="menu-item">
+                        <div class="icon-size"></div>
+                        <p class="flex-1 h-4">Custom number format</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Text/Format -->
+                <div class="menu-item group/column">
+                  <div class="icon-size">
+                    <i class="fa-solid fa-bold i-size"></i>
+                  </div>
+                  <p class="flex-1 h-4">Text</p>
+                  <i class="fa-solid fa-caret-right opacity-65"></i>
+                  <!-- submenu -->
+                  <div
+                    class="menu top-0 left-80 w-64 hidden group-hover/column:block"
+                  >
+                    <div class="menu-item">
+                      <div class="icon-size">
+                        <i class="fa-solid fa-bold i-size"></i>
+                      </div>
+                      <p class="flex-1 h-4">Bold</p>
+                      <p class="opacity-65">Ctrl+B</p>
+                    </div>
+                    <div class="menu-item">
+                      <div class="icon-size">
+                        <i class="fa-solid fa-italic i-size"></i>
+                      </div>
+                      <p class="flex-1 h-4">Italic</p>
+                      <p class="opacity-65">Ctrl+I</p>
+                    </div>
+                    <div class="menu-item">
+                      <div class="icon-size">
+                        <i class="fa-solid fa-underline i-size"></i>
+                      </div>
+                      <p class="flex-1 h-4">Underline</p>
+                      <p class="opacity-65">Ctrl+U</p>
+                    </div>
+                    <div class="menu-item">
+                      <div class="icon-size">
+                        <i class="fa-solid fa-strikethrough i-size"></i>
+                      </div>
+                      <p class="flex-1 h-4">Strikethrough</p>
+                      <p class="opacity-65">Alt+Shift+S</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Allignment/Format -->
+                <div class="menu-item group/column">
+                  <div class="icon-size">
+                    <i class="fa-solid fa-align-left i-size"></i>
+                  </div>
+                  <p class="flex-1 h-4">Allignment</p>
+                  <i class="fa-solid fa-caret-right opacity-65"></i>
+                  <!-- submenu -->
+                  <div
+                    class="menu top-0 left-80 w-64 hidden group-hover/column:block"
+                  >
+                    <div class="sect">
+                      <div class="menu-item">
+                        <div class="icon-size">
+                          <i class="fa-solid fa-align-left i-size"></i>
+                        </div>
+                        <p class="flex-1 h-4">Left</p>
+                        <p class="opacity-65">Ctrl+Shift+L</p>
+                      </div>
+                      <div class="menu-item">
+                        <div class="icon-size">
+                          <i class="fa-solid fa-align-center i-size"></i>
+                        </div>
+                        <p class="flex-1 h-4">Center</p>
+                        <p class="opacity-65">Ctrl+Shift+E</p>
+                      </div>
+                      <div class="menu-item">
+                        <div class="icon-size">
+                          <i class="fa-solid fa-align-right i-size"></i>
+                        </div>
+                        <p class="flex-1 h-4">Right</p>
+                        <p class="opacity-65">Ctrl+Shift+R</p>
+                      </div>
+                    </div>
+                    <!-- Seperator -->
+                    <hr />
+                    <div class="sect">
+                      <div class="menu-item">
+                        <div class="icon-size">
+                          <i class="fa-solid fa-arrows-up-to-line i-size"></i>
+                        </div>
+                        <p class="flex-1 h-4">Top</p>
+                      </div>
+                      <div class="menu-item">
+                        <div class="icon-size">
+                          <i class="fa-solid fa-arrows-to-circle i-size"></i>
+                        </div>
+                        <p class="flex-1 h-4">Middle</p>
+                      </div>
+                      <div class="menu-item">
+                        <div class="icon-size">
+                          <i class="fa-solid fa-arrows-down-to-line i-size"></i>
+                        </div>
+                        <p class="flex-1 h-4">Bottom</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Wrapping/Format -->
+                <div class="menu-item group/column">
+                  <div class="icon-size">
+                    <img
+                      src="./assets/format_text_wrap_FILL0_wght400_GRAD0_opsz24.png"
+                      alt=""
+                      class=""
+                    />
+                  </div>
+                  <p class="flex-1 h-4">Wrapping</p>
+                  <i class="fa-solid fa-caret-right opacity-65"></i>
+                  <!-- submenu -->
+                  <div
+                    class="menu top-0 left-80 w-64 hidden group-hover/column:block"
+                  >
+                    <div class="menu-item">
+                      <div class="icon-size">
+                        <img
+                          src="./assets/format_text_overflow_FILL0_wght400_GRAD0_opsz24.png"
+                          alt=""
+                          class=""
+                        />
+                      </div>
+                      <p class="flex-1 h-4">Overflow</p>
+                      <p class="opacity-65">Ctrl+B</p>
+                    </div>
+                    <div class="menu-item">
+                      <div class="icon-size">
+                        <img
+                          src="./assets/format_text_wrap_FILL0_wght400_GRAD0_opsz24.png"
+                          alt=""
+                          class=""
+                        />
+                      </div>
+                      <p class="flex-1 h-4">Wrap</p>
+                      <p class="opacity-65">Ctrl+I</p>
+                    </div>
+                    <div class="menu-item">
+                      <div class="icon-size">
+                        <img
+                          src="./assets/format_text_clip_FILL0_wght400_GRAD0_opsz24.png"
+                          alt=""
+                          class=""
+                        />
+                      </div>
+                      <p class="flex-1 h-4">Clip</p>
+                      <p class="opacity-65">Ctrl+U</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Rotation/Format -->
+                <div class="menu-item group/column">
+                  <div class="icon-size">
+                    <img
+                      src="./assets/text_rotation_angleup_FILL0_wght400_GRAD0_opsz24.png"
+                      alt=""
+                      class=""
+                    />
+                  </div>
+                  <p class="flex-1 h-4">Rotation</p>
+                  <i class="fa-solid fa-caret-right opacity-65"></i>
+                  <!-- submenu -->
+                  <div
+                    class="menu top-0 left-80 w-64 hidden group-hover/column:block"
+                  >
+                    <div class="sect">
+                      <div class="menu-item">
+                        <div class="icon-size">
+                          <img
+                            src="./assets/text_rotation_none_FILL0_wght400_GRAD0_opsz24.png"
+                            alt=""
+                            class=""
+                          />
+                        </div>
+                        <p class="flex-1 h-4">None</p>
+                      </div>
+                      <div class="menu-item">
+                        <div class="icon-size">
+                          <img
+                            src="./assets/text_rotation_angleup_FILL0_wght400_GRAD0_opsz24.png"
+                            alt=""
+                            class=""
+                          />
+                        </div>
+                        <p class="flex-1 h-4">Tilt up</p>
+                      </div>
+                      <div class="menu-item">
+                        <div class="icon-size">
+                          <img
+                            src="./assets/text_rotation_angledown_FILL0_wght400_GRAD0_opsz24.png"
+                            alt=""
+                            class=""
+                          />
+                        </div>
+                        <p class="flex-1 h-4">Tilt down</p>
+                      </div>
+                      <div class="menu-item">
+                        <div class="icon-size">
+                          <img
+                            src="./assets/text_rotate_vertical_FILL0_wght400_GRAD0_opsz24.png"
+                            alt=""
+                            class=""
+                          />
+                        </div>
+                        <p class="flex-1 h-4">Stack vertically</p>
+                      </div>
+                      <div class="menu-item">
+                        <div class="icon-size">
+                          <img
+                            src="./assets/text_rotate_up_FILL0_wght400_GRAD0_opsz24.png"
+                            alt=""
+                            class=""
+                          />
+                        </div>
+                        <p class="flex-1 h-4">Rotate up</p>
+                      </div>
+                      <div class="menu-item">
+                        <div class="icon-size">
+                          <img
+                            src="./assets/text_rotation_down_FILL0_wght400_GRAD0_opsz24.png"
+                            alt=""
+                            class=""
+                          />
+                        </div>
+                        <p class="flex-1 h-4">Rotate down</p>
+                      </div>
+                    </div>
+                    <!-- Seperator -->
+                    <hr />
+                    <div class="sect">
+                      <div class="menu-item">
+                        <div class="icon-size">
+                          <img
+                            src="./assets/architecture_FILL0_wght400_GRAD0_opsz24.png"
+                            alt=""
+                            class=""
+                          />
+                        </div>
+                        <p class="flex-1 h-4">Custom angle</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Seperator -->
+              <hr />
+              <!-- section2 tsz -->
+              <div class="sect">
+                <!-- Font Size -->
+                <div class="menu-item group/zoom">
+                  <div class="icon-size">
+                    <i class="fa-solid fa-text-height i-size"></i>
+                  </div>
+                  <p class="flex-1 h-4">Font Size</p>
+                  <i class="fa-solid fa-caret-right opacity-65"></i>
+                  <!-- submenu /fontsize-->
+                  <div
+                    class="menu top-0 left-80 w-24 hidden group-hover/zoom:block"
+                  >
+                    <!-- subsection1/fontsize -->
+                    <div class="sect">
+                      <div class="menu-item">
+                        <div class="icon-size"></div>
+                        <p class="flex-1 h-4">6</p>
+                      </div>
+                      <div class="menu-item">
+                        <div class="icon-size"></div>
+                        <p class="flex-1 h-4">7</p>
+                      </div>
+                      <div class="menu-item">
+                        <div class="icon-size"></div>
+                        <p class="flex-1 h-4">8</p>
+                      </div>
+                      <div class="menu-item">
+                        <div class="icon-size">
+                          <i class="fa-solid fa-check i-size"></i>
+                        </div>
+                        <p class="flex-1 h-4">9</p>
+                      </div>
+                      <div class="menu-item">
+                        <div class="icon-size"></div>
+                        <p class="flex-1 h-4">10</p>
+                      </div>
+                      <div class="menu-item">
+                        <div class="icon-size"></div>
+                        <p class="flex-1 h-4">11</p>
+                      </div>
+                      <div class="menu-item">
+                        <div class="icon-size"></div>
+                        <p class="flex-1 h-4">12</p>
+                      </div>
+                      <div class="menu-item">
+                        <div class="icon-size"></div>
+                        <p class="flex-1 h-4">14</p>
+                      </div>
+                      <div class="menu-item">
+                        <div class="icon-size"></div>
+                        <p class="flex-1 h-4">18</p>
+                      </div>
+                      <div class="menu-item">
+                        <div class="icon-size"></div>
+                        <p class="flex-1 h-4">24</p>
+                      </div>
+                      <div class="menu-item">
+                        <div class="icon-size"></div>
+                        <p class="flex-1 h-4">36</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Merge Cells -->
+                <div class="menu-item opacity-30 hover:bg-white">
+                  <div class="icon-size">
+                    <img
+                      src="./assets/cell_merge_FILL0_wght400_GRAD0_opsz24.png"
+                      alt=""
+                      class=""
+                    />
+                  </div>
+                  <p class="flex-1 h-4">Merge Cells</p>
+                  <i class="fa-solid fa-caret-right opacity-65"></i>
+                </div>
+              </div>
+              <!-- Seperator -->
+              <hr />
+              <!-- section3 -->
+              <div class="sect">
+                <!-- condtional /format-->
+                <div class="menu-item">
+                  <div class="icon-size">
+                    <i class="fa-solid fa-brush i-size"></i>
+                  </div>
+                  <p class="flex-1 h-4">Conditional formatting</p>
+                </div>
+                <div class="menu-item">
+                  <div class="icon-size">
+                    <i class="fa-solid fa-droplet i-size"></i>
+                  </div>
+                  <p class="flex-1 h-4">Alternating colors</p>
+                </div>
+              </div>
+              <!-- Seperator -->
+              <hr />
+              <!-- section4  -->
+              <div class="sect">
+                <!-- clear /format-->
+                <div class="menu-item">
+                  <div class="icon-size">
+                    <img
+                      src="./assets/format_clear_FILL0_wght400_GRAD0_opsz24.png"
+                      alt=""
+                      class=""
+                    />
+                  </div>
+                  <p class="flex-1 h-4">Clear formatting</p>
+                  <p class="opacity-65 h-4">Ctrl+\</p>
+                </div>
+              </div>
+            </div>
           </div>
           <!-- ─── Data ────────────────── ✣ ─ -->
-          <div class="hover:bg-gray-200 px-2.5 py-1 rounded-md cursor-pointer">
-            Data
+          <div class="group relative">
+            <div
+              class="hover:bg-gray-200 px-2.5 py-1 rounded-md cursor-pointer"
+            >
+              Data
+            </div>
+            <!-- dropdown file menu -->
+            <div class="menu hidden group-hover:block">
+              <!-- section sort -->
+              <div class="sect">
+                <div class="menu-item group/rows">
+                  <div class="icon-size">
+                    <i class="fa-solid fa-arrow-up-wide-short i-size"></i>
+                  </div>
+                  <p class="flex-1 h-4">Sort sheet</p>
+                  <i class="fa-solid fa-caret-right opacity-65"></i>
+                  <!-- submenu -->
+                  <div
+                    class="menu top-0 left-80 w-72 hidden group-hover/rows:block"
+                  >
+                    <div class="menu-item">
+                      <p class="flex-1 h-4">
+                        Sort sheet by
+                        <span class="font-semibold">column A</span> (A to Z)
+                      </p>
+                    </div>
+                    <div class="menu-item">
+                      <p class="flex-1 h-4">
+                        Sort sheet by
+                        <span class="font-semibold">column A</span> (Z to A)
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="menu-item opacity-30 hover:bg-white">
+                  <div class="icon-size">
+                    <i class="fa-solid fa-arrow-up-wide-short i-size"></i>
+                  </div>
+                  <p class="flex-1 h-4">Sort range</p>
+                  <i class="fa-solid fa-caret-right opacity-65"></i>
+                </div>
+              </div>
+              <!-- Seperator -->
+              <hr />
+              <!-- section filter -->
+              <div class="sect">
+                <div class="menu-item">
+                  <div class="icon-size">
+                    <i class="fa-solid fa-filter i-size"></i>
+                  </div>
+                  <p class="flex-1 h-4">Create a filter</p>
+                </div>
+                <div class="menu-item group/rows">
+                  <div class="icon-size">
+                    <img
+                      src="./assets/table_view_FILL0_wght400_GRAD0_opsz24.png"
+                      alt=""
+                      class=""
+                    />
+                  </div>
+                  <p class="flex-1 h-4">Filter views</p>
+                  <i class="fa-solid fa-caret-right opacity-65"></i>
+                  <!-- submenu -->
+                  <div
+                    class="menu top-0 left-80 w-72 hidden group-hover/rows:block"
+                  >
+                    <div class="sect">
+                      <div class="menu-item">
+                        <p class="flex-1 h-4">Create new filter view</p>
+                      </div>
+                      <div class="menu-item opacity-30 hover:bg-white">
+                        <p class="flex-1 h-4">Delete all filter views</p>
+                      </div>
+                      <div class="menu-item opacity-30 hover:bg-white">
+                        <p class="flex-1 h-4">Filter view options</p>
+                      </div>
+                    </div>
+                    <!-- Seperator -->
+                    <hr />
+                    <div class="sect">
+                      <div class="menu-item">
+                        <p class="flex-1 h-4">Learn more</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="menu-item">
+                  <div class="icon-size">
+                    <img
+                      src="./assets/filter_list_FILL0_wght400_GRAD0_opsz24.png"
+                      alt=""
+                      class=""
+                    />
+                  </div>
+                  <p class="flex-1 h-4">Add a slicer</p>
+                </div>
+              </div>
+              <!-- Seperator -->
+              <hr />
+              <!-- section ranges -->
+              <div class="sect">
+                <div class="menu-item">
+                  <div class="icon-size">
+                    <i class="fa-solid fa-lock i-size"></i>
+                  </div>
+                  <p class="flex-1 h-4">Protect sheets and ranges</p>
+                </div>
+                <div class="menu-item">
+                  <div class="icon-size">
+                    <i class="fa-solid fa-table-cells i-size"></i>
+                  </div>
+                  <p class="flex-1 h-4">Named ranges</p>
+                </div>
+                <div class="menu-item">
+                  <div class="icon-size">
+                    <img
+                      src="./assets/functions_FILL0_wght400_GRAD0_opsz24.png"
+                      alt=""
+                      class=""
+                    />
+                  </div>
+                  <p class="flex-1 h-4">Named functions</p>
+                  <p
+                    class="h-4.5 px-2 bg-green-700 rounded-full text-white font-medium"
+                  >
+                    new
+                  </p>
+                </div>
+                <div class="menu-item opacity-30 hover:bg-white">
+                  <div class="icon-size">
+                    <i class="fa-solid fa-shuffle i-size"></i>
+                  </div>
+                  <p class="flex-1 h-4">Randomize range</p>
+                </div>
+              </div>
+              <!-- Seperator -->
+              <hr />
+              <!-- section sstats -->
+              <div class="sect">
+                <div class="menu-item">
+                  <div class="icon-size">
+                    <i class="fa-regular fa-lightbulb i-size"></i>
+                  </div>
+                  <p class="flex-1 h-4">Column stats</p>
+                </div>
+                <div class="menu-item">
+                  <div class="icon-size">
+                    <i class="fa-solid fa-list-check i-size"></i>
+                  </div>
+                  <p class="flex-1 h-4">Data validation</p>
+                </div>
+                <div class="menu-item group/rows">
+                  <div class="icon-size">
+                    <i class="fa-solid fa-wand-magic-sparkles i-size"></i>
+                  </div>
+                  <p class="flex-1 h-4">Data cleanup</p>
+                  <i class="fa-solid fa-caret-right opacity-65"></i>
+                  <!-- submenu -->
+                  <div
+                    class="menu top-0 left-80 w-72 hidden group-hover/rows:block"
+                  >
+                    <div class="sect">
+                      <div class="menu-item">
+                        <p class="flex-1 h-4">Cleanup suggestions</p>
+                      </div>
+                      <div class="menu-item">
+                        <p class="flex-1 h-4">Remove duplicates</p>
+                      </div>
+                      <div class="menu-item">
+                        <p class="flex-1 h-4">Trim whitespace</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="menu-item">
+                  <div class="icon-size">
+                    <i class="fa-solid fa-table-columns i-size"></i>
+                  </div>
+                  <p class="flex-1 h-4">Split text to columns</p>
+                </div>
+                <div class="menu-item">
+                  <div class="icon-size">
+                    <i class="fa-solid fa-arrow-right-from-bracket i-size"></i>
+                  </div>
+                  <p class="flex-1 h-4">Data extraction</p>
+                </div>
+              </div>
+              <!-- Seperator -->
+              <hr />
+              <!-- section connector -->
+              <div class="sect">
+                <div class="menu-item">
+                  <div class="icon-size">
+                    <i class="fa-solid fa-database i-size"></i>
+                  </div>
+                  <p class="flex-1 h-4">Data connectors</p>
+                  <p
+                    class="h-4.5 px-2 bg-green-700 rounded-full text-white font-medium"
+                  >
+                    new
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
           <!-- ─── Tools ────────────────── ✣ ─ -->
-          <div class="hover:bg-gray-200 px-2.5 py-1 rounded-md cursor-pointer">
-            Tools
+          <div class="group relative">
+            <div
+              class="hover:bg-gray-200 px-2.5 py-1 rounded-md cursor-pointer"
+            >
+              Tools
+            </div>
+            <!-- dropdown file menu -->
+            <div class="menu hidden group-hover:block">
+              <!-- section -->
+              <div class="sect">
+                <div class="menu-item">
+                  <div class="icon-size">
+                    <img
+                      src="./assets/pngfind.com-google-forms-png-5309946.png"
+                      alt=""
+                      class="xl:w-3.5 w-2.5"
+                    />
+                  </div>
+                  <p class="flex-1 h-4">Create a new form</p>
+                </div>
+              </div>
+              <!-- Seperator -->
+              <hr />
+              <!-- section -->
+              <div class="sect">
+                <div class="menu-item group/rows">
+                  <div class="icon-size">
+                    <i class="fa-solid fa-spell-check i-size"></i>
+                  </div>
+                  <p class="flex-1 h-4">Spelling</p>
+                  <i class="fa-solid fa-caret-right opacity-65"></i>
+                  <!-- submenu -->
+                  <div
+                    class="menu top-0 left-80 w-72 hidden group-hover/rows:block"
+                  >
+                    <div class="sect">
+                      <div class="menu-item">
+                        <p class="flex-1 h-4">Spell check</p>
+                      </div>
+                      <div class="menu-item">
+                        <p class="flex-1 h-4">Personal dictionary</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="menu-item group/rows">
+                  <div class="icon-size">
+                    <i class="fa-solid fa-wand-sparkles i-size"></i>
+                  </div>
+                  <p class="flex-1 h-4">Autocomplete</p>
+                  <i class="fa-solid fa-caret-right opacity-65"></i>
+                  <!-- submenu -->
+                  <div
+                    class="menu top-0 left-80 w-72 hidden group-hover/rows:block"
+                  >
+                    <div class="sect">
+                      <div class="menu-item">
+                        <div class="icon-size">
+                          <i class="fa-solid fa-check i-size"></i>
+                        </div>
+                        <p class="flex-1 h-4">Enable autocomplete</p>
+                      </div>
+                      <div class="menu-item">
+                        <div class="icon-size">
+                          <i class="fa-solid fa-check i-size"></i>
+                        </div>
+                        <p class="flex-1 h-4">Enable formula suggestions</p>
+                      </div>
+                      <div class="menu-item">
+                        <div class="icon-size">
+                          <i class="fa-solid fa-check i-size"></i>
+                        </div>
+                        <p class="flex-1 h-4">Enable formula corrections</p>
+                      </div>
+                      <div class="menu-item">
+                        <div class="icon-size">
+                          <i class="fa-solid fa-check i-size"></i>
+                        </div>
+                        <p class="flex-1 h-4">
+                          Enable named functions suggestions
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Seperator -->
+              <hr />
+              <!-- section -->
+              <div class="sect">
+                <div class="menu-item group/rows">
+                  <div class="icon-size">
+                    <i class="fa-solid fa-spell-check i-size"></i>
+                  </div>
+                  <p class="flex-1 h-4">Notification settings</p>
+                  <i class="fa-solid fa-caret-right opacity-65"></i>
+                  <!-- submenu -->
+                  <div
+                    class="menu top-0 left-80 w-72 hidden group-hover/rows:block"
+                  >
+                    <div class="sect">
+                      <div class="menu-item">
+                        <p class="flex-1 h-4">Edit notifications</p>
+                      </div>
+                      <div class="menu-item">
+                        <p class="flex-1 h-4">Comment notifications</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="menu-item">
+                  <div class="icon-size">
+                    <i class="fa-solid fa-universal-access i-size"></i>
+                  </div>
+                  <p class="flex-1 h-4">Accessibility</p>
+                </div>
+              </div>
+            </div>
           </div>
           <!-- ─── Extensions ────────────────── ✣ ─ -->
-          <div class="hover:bg-gray-200 px-2.5 py-1 rounded-md cursor-pointer">
-            Extensions
+          <div class="group relative">
+            <div
+              class="hover:bg-gray-200 px-2.5 py-1 rounded-md cursor-pointer"
+            >
+              Extensions
+            </div>
+            <!-- dropdown file menu -->
+            <div class="menu hidden group-hover:block">
+              <!-- section -->
+              <div class="sect">
+                <div class="menu-item group/rows">
+                  <div class="icon-size">
+                    <i class="fa-solid fa-puzzle-piece i-size"></i>
+                  </div>
+                  <p class="flex-1 h-4">Add-ons</p>
+                  <i class="fa-solid fa-caret-right opacity-65"></i>
+                  <!-- submenu -->
+                  <div
+                    class="menu top-0 left-80 w-72 hidden group-hover/rows:block"
+                  >
+                    <div class="sect">
+                      <div class="menu-item">
+                        <p class="flex-1 h-4">Get add-ons</p>
+                      </div>
+                      <div class="menu-item">
+                        <p class="flex-1 h-4">Manage add-ons</p>
+                      </div>
+                    </div>
+                    <!-- seperator -->
+                    <hr />
+                    <div class="menu-item opacity-30 hover:bg-white">
+                      <p class="flex-1 h-4">View document add-ons</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- ─── ✣ ─ -->
+                <div class="menu-item group/rows">
+                  <div class="icon-size">
+                    <i class="fa-regular fa-circle-play i-size"></i>
+                  </div>
+                  <p class="flex-1 h-4">Macros</p>
+                  <i class="fa-solid fa-caret-right opacity-65"></i>
+                  <!-- submenu -->
+                  <div
+                    class="menu top-0 left-80 w-72 hidden group-hover/rows:block"
+                  >
+                    <div class="sect">
+                      <div class="menu-item">
+                        <p class="flex-1 h-4">Record macro</p>
+                      </div>
+                    </div>
+                    <!-- seperator -->
+                    <hr />
+                    <div class="menu-item opacity-30 hover:bg-white">
+                      <p class="flex-1 h-4">Import macro</p>
+                    </div>
+                    <div class="menu-item opacity-30 hover:bg-white">
+                      <p class="flex-1 h-4">Manage macros</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- ─── ✣ ─ -->
+                <div class="menu-item">
+                  <div class="icon-size">
+                    <img
+                      src="./assets/google-apps-script.png"
+                      alt=""
+                      class=""
+                    />
+                  </div>
+                  <p class="flex-1 h-4">Apps Script</p>
+                </div>
+              </div>
+              <!-- Seperator -->
+              <hr />
+              <!-- section -->
+              <div class="sect">
+                <div class="menu-item group/rows">
+                  <div class="icon-size">
+                    <img src="./assets/app-sheet.svg" alt="" class="" />
+                  </div>
+                  <p class="flex-1 h-4">AppSheet</p>
+                  <i class="fa-solid fa-caret-right opacity-65"></i>
+                  <!-- submenu -->
+                  <div
+                    class="menu top-0 left-80 w-72 hidden group-hover/rows:block"
+                  >
+                    <div class="sect">
+                      <div class="menu-item opacity-30 hover:bg-white">
+                        <p class="flex-1 h-4">Create an app</p>
+                      </div>
+                    </div>
+                    <!-- seperator -->
+                    <hr />
+                    <div class="menu-item">
+                      <p class="flex-1 h-4">View sample apps</p>
+                    </div>
+                    <div class="menu-item">
+                      <p class="flex-1 h-4">Learn how to create apps</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <!-- ─── Help ────────────────── ✣ ─ -->
-          <div class="hover:bg-gray-200 px-2.5 py-1 rounded-md cursor-pointer">
-            Help
+          <div class="group relative">
+            <div
+              class="hover:bg-gray-200 px-2.5 py-1 rounded-md cursor-pointer"
+            >
+              Help
+            </div>
+            <!-- dropdown file menu -->
+            <div class="menu hidden group-hover:block">
+              <!-- section -->
+              <div class="sect">
+                <!-- ─── ✣ ─ -->
+                <div class="menu-item">
+                  <div class="icon-size">
+                    <i class="fa-solid fa-magnifying-glass i-size"></i>
+                  </div>
+                  <p class="flex-1 h-4">Search the menus</p>
+                  <p class="opacity-75 h-4">Alt+/</p>
+                </div>
+              </div>
+              <!-- Seperator -->
+              <hr />
+              <!-- section -->
+              <div class="sect">
+                <!-- ─── ✣ ─ -->
+                <div class="menu-item">
+                  <div class="icon-size">
+                    <i class="fa-regular fa-circle-question i-size"></i>
+                  </div>
+                  <p class="flex-1 h-4">Sheets Help</p>
+                </div>
+                <div class="menu-item">
+                  <div class="icon-size">
+                    <i class="fa-solid fa-graduation-cap i-size"></i>
+                  </div>
+                  <p class="flex-1 h-4">Training</p>
+                </div>
+                <div class="menu-item">
+                  <div class="icon-size">
+                    <i class="fa-solid fa-tower-broadcast i-size"></i>
+                  </div>
+                  <p class="flex-1 h-4">Updates</p>
+                </div>
+              </div>
+              <!-- Seperator -->
+              <hr />
+              <!-- section -->
+              <div class="sect">
+                <div class="menu-item">
+                  <div class="icon-size">
+                    <i class="fa-regular fa-message i-size"></i>
+                  </div>
+                  <p class="flex-1 h-4">Help Sheets improve</p>
+                </div>
+                <div class="menu-item">
+                  <div class="icon-size">
+                    <i class="fa-solid fa-triangle-exclamation i-size"></i>
+                  </div>
+                  <p class="flex-1 h-4">Report abuse</p>
+                </div>
+              </div>
+              <!-- Seperator -->
+              <hr />
+              <!-- section -->
+              <div class="sect">
+                <div class="menu-item">
+                  <div class="icon-size">
+                    <i class="fa-regular fa-file-lines i-size"></i>
+                  </div>
+                  <p class="flex-1 h-4">Privacy Policy</p>
+                </div>
+                <div class="menu-item">
+                  <div class="icon-size">
+                    <i class="fa-regular fa-file-lines i-size"></i>
+                  </div>
+                  <p class="flex-1 h-4">Terms of Service</p>
+                </div>
+              </div>
+              <!-- Seperator -->
+              <hr />
+              <!-- section -->
+              <div class="sect">
+                <div class="menu-item">
+                  <div class="icon-size">
+                    <img
+                      src="./assets/functions_FILL0_wght400_GRAD0_opsz24.png"
+                      alt=""
+                      class=""
+                    />
+                  </div>
+                  <p class="flex-1 h-4">Function list</p>
+                </div>
+                <div class="menu-item">
+                  <div class="icon-size">
+                    <i class="fa-regular fa-keyboard i-size"></i>
+                  </div>
+                  <p class="flex-1 h-4">Keyboard shortcuts</p>
+                  <p class="opacity-75 h-4">Ctrl+/</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1011,14 +2040,22 @@
         <div
           class="hover:bg-gray-200 p-2 rounded-full cursor-pointer group relative"
         >
-          <img src="./assets/restore_black_24dp.svg" alt="" class="xl:w-6 xl:h-6 w-5 h-5" />
+          <img
+            src="./assets/restore_black_24dp.svg"
+            alt=""
+            class="xl:w-6 xl:h-6 w-5 h-5"
+          />
           <div class="-left-[120%] tooltip">Last edit was 3 days ago</div>
         </div>
         <!-- ─── Comments ───────────────────── ✣ ─ -->
         <div
           class="hover:bg-gray-200 p-2 rounded-full cursor-pointer group relative"
         >
-          <img src="./assets/comment_black_24dp.svg" alt="" class="xl:w-6 xl:h-6 w-5 h-5" />
+          <img
+            src="./assets/comment_black_24dp.svg"
+            alt=""
+            class="xl:w-6 xl:h-6 w-5 h-5"
+          />
           <div class="-left-[220%] tooltip">
             Open comments history (Ctrl+Shift+Alt+A)
           </div>
@@ -1027,7 +2064,11 @@
         <div
           class="flex items-center gap-2 hover:bg-gray-200 py-2 px-2.5 rounded-full cursor-pointer group relative"
         >
-          <img src="./assets/google-meet.svg" alt="" class="xl:w-6 xl:h-6 w-5 h-5" />
+          <img
+            src="./assets/google-meet.svg"
+            alt=""
+            class="xl:w-6 xl:h-6 w-5 h-5"
+          />
           <i class="fa-solid fa-caret-down text-xs xl:text-sm"></i>
           <div class="-left-[120%] tooltip">
             Join a call or present this tab to a call
@@ -1046,7 +2087,7 @@
               />
             </div>
 
-            <p class="font-medium">Share</p>
+            <p class="font-medium text-sm 2xl:text-base">Share</p>
             <div class="tooltip -left-0">Private to only me</div>
           </div>
           <div
