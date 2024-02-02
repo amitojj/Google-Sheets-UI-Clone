@@ -33,7 +33,7 @@
     </style>
   </head>
 
-  <body class="font-rob flex w-screen h-screen flex-col">
+  <body class="font-rob flex w-screen h-screen flex-col max-h-screen overflow-hidden">
     <!-- ─── Navbar ──────────────────────────────────────────────────────── ✣ ─ -->
     <nav class="navbar flex justify-between items-center h-16 max-h-16">
       <!-- ───sheets Logo ────────────────────────────────────────────────── ✣ ─ -->
@@ -56,7 +56,7 @@
           <div class="group relative">
             <input
               type="text"
-              class="text-lg hover:border border-black pl-2 px-0 h-7 rounded-md"
+              class="text-base xl:text-lg hover:border border-black pl-2 px-0 h-7 rounded-md"
               value="Untitled spreadsheet"
             />
             <!-- tooltip -->
@@ -97,7 +97,7 @@
           </div>
         </div>
         <!-- lower-row -->
-        <div class="flex items-center text-sm flex-shrink-0 min-w-max">
+        <div class="flex items-center text-xs xl:text-sm flex-shrink-0 min-w-max">
           <!-- ─── File ────────────────── ✣ ─ -->
           <div class="group relative">
             <div
@@ -106,16 +106,16 @@
               File
             </div>
             <!-- dropdown file menu -->
-            <div class="menu hidden group-hover:block">
+            <div class="menu hidden  group-hover:block   ">
               <!-- section1 -->
-              <div class="flex flex-col py-2">
+              <div class="menu-sec">
                 <!-- new -->
                 <div class="menu-item group/new">
-                  <div class="w-4 h-4">
+                  <div class="icon-size">
                     <img
                       src="./assets/nordic.png"
                       alt=""
-                      class="w-3.5 h-3.5 opacity-75"
+                      class="xl:w-3.5 xl:h-3.5 w-2.5 h-2.5 opacity-75"
                     />
                   </div>
                   <p class="flex-1 h-4">New</p>
@@ -125,21 +125,21 @@
                     class="menu top-0 left-80 w-56 hidden group-hover/new:block"
                   >
                     <div class="menu-item">
-                      <div class="w-4 h-4">
+                      <div class="icon-size">
                         <img
                           src="./assets/nordic-green.png"
                           alt=""
-                          class="w-4 h-4"
+                          class="icon-size"
                         />
                       </div>
                       <p class="flex-1 h-4">Spreadsheet</p>
                     </div>
                     <div class="menu-item">
-                      <div class="w-4 h-4">
+                      <div class="icon-size">
                         <img
                           src="./assets/template.jpg"
                           alt=""
-                          class="w-4 h-4"
+                          class="icon-size"
                         />
                       </div>
                       <p class="flex-1 h-4">From template gallery</p>
@@ -148,23 +148,23 @@
                 </div>
                 <!-- Open -->
                 <div class="menu-item">
-                  <div class="w-4 h-4">
-                    <i class="fa-regular fa-folder-open text-[15px]"></i>
+                  <div class="icon-size">
+                    <i class="fa-regular fa-folder-open i-size"></i>
                   </div>
                   <p class="flex-1 h-4">Open</p>
                   <p class="opacity-65">Ctrl+O</p>
                 </div>
                 <!-- Import -->
                 <div class="menu-item">
-                  <div class="w-4 h-4">
-                    <i class="fa-solid fa-file-import text-[15px]"></i>
+                  <div class="icon-size">
+                    <i class="fa-solid fa-file-import i-size"></i>
                   </div>
                   <p class="flex-1 h-4">Import</p>
                 </div>
                 <!-- copy -->
                 <div class="menu-item">
-                  <div class="w-4 h-4">
-                    <i class="fa-solid fa-copy text-[15px]"></i>
+                  <div class="icon-size">
+                    <i class="fa-solid fa-copy i-size"></i>
                   </div>
                   <p class="flex-1 h-4">Make a copy</p>
                 </div>
@@ -172,11 +172,11 @@
               <!-- Seperator -->
               <hr />
               <!-- section2 -->
-              <div class="flex flex-col py-2">
+              <div class="menu-sec">
                 <!-- Share -->
                 <div class="menu-item group/share">
-                  <div class="w-4 h-4">
-                    <i class="fa-solid fa-user-plus text-[15px]"></i>
+                  <div class="icon-size">
+                    <i class="fa-solid fa-user-plus i-size"></i>
                   </div>
                   <p class="flex-1 h-4">Share</p>
                   <i class="fa-solid fa-caret-right opacity-65"></i>
@@ -185,14 +185,14 @@
                     class="menu top-0 left-80 w-64 hidden group-hover/share:block"
                   >
                     <div class="menu-item">
-                      <div class="w-4 h-4">
-                        <i class="fa-solid fa-user-plus text-[15px]"></i>
+                      <div class="icon-size">
+                        <i class="fa-solid fa-user-plus i-size"></i>
                       </div>
                       <p class="flex-1 h-4">Share with others</p>
                     </div>
                     <div class="menu-item">
-                      <div class="w-4 h-4">
-                        <i class="fa-solid fa-earth-americas text-[15px]"></i>
+                      <div class="icon-size">
+                        <i class="fa-solid fa-earth-americas i-size"></i>
                       </div>
                       <p class="flex-1 h-4">Publish to web</p>
                     </div>
@@ -200,8 +200,8 @@
                 </div>
                 <!-- Email -->
                 <div class="menu-item group/email">
-                  <div class="w-4 h-4">
-                    <i class="fa-solid fa-envelope text-[15px]"></i>
+                  <div class="icon-size">
+                    <i class="fa-solid fa-envelope i-size"></i>
                   </div>
                   <p class="flex-1 h-4">Email</p>
                   <i class="fa-solid fa-caret-right opacity-65"></i>
@@ -219,8 +219,8 @@
                 </div>
                 <!-- Download -->
                 <div class="menu-item group/download">
-                  <div class="w-4 h-4">
-                    <i class="fa-solid fa-download text-[15px]"></i>
+                  <div class="icon-size">
+                    <i class="fa-solid fa-download i-size"></i>
                   </div>
                   <p class="flex-1 h-4">Download</p>
                   <i class="fa-solid fa-caret-right opacity-65"></i>
@@ -252,32 +252,32 @@
               <!-- Seperator -->
               <hr />
               <!-- section3 -->
-              <div class="flex flex-col py-2">
+              <div class="menu-sec">
                 <!-- rename -->
                 <div class="menu-item">
-                  <div class="w-4 h-4">
-                    <i class="fa-solid fa-pencil text-[15px]"></i>
+                  <div class="icon-size">
+                    <i class="fa-solid fa-pencil i-size"></i>
                   </div>
                   <p class="flex-1 h-4">Rename</p>
                 </div>
                 <!-- move -->
                 <div class="menu-item">
-                  <div class="w-4 h-4">
-                    <i class="fa-solid fa-folder-tree text-[15px]"></i>
+                  <div class="icon-size">
+                    <i class="fa-solid fa-folder-tree i-size"></i>
                   </div>
                   <p class="flex-1 h-4">Move</p>
                 </div>
                 <!-- drive -->
                 <div class="menu-item">
-                  <div class="w-4 h-4">
-                    <i class="fa-brands fa-google-drive text-[15px]"></i>
+                  <div class="icon-size">
+                    <i class="fa-brands fa-google-drive i-size"></i>
                   </div>
                   <p class="flex-1 h-4">Add shortcut to Drive</p>
                 </div>
                 <!-- trash -->
                 <div class="menu-item">
-                  <div class="w-4 h-4">
-                    <i class="fa-solid fa-trash-can text-[15px]"></i>
+                  <div class="icon-size">
+                    <i class="fa-solid fa-trash-can i-size"></i>
                   </div>
                   <p class="flex-1 h-4">Move to trash</p>
                 </div>
@@ -285,11 +285,11 @@
               <!-- Seperator -->
               <hr />
               <!-- section4  -->
-              <div class="flex flex-col py-2">
+              <div class="menu-sec">
                 <!-- Email -->
                 <div class="menu-item group/history">
-                  <div class="w-4 h-4">
-                    <i class="fa-solid fa-clock-rotate-left text-[15px]"></i>
+                  <div class="icon-size">
+                    <i class="fa-solid fa-clock-rotate-left i-size"></i>
                   </div>
                   <p class="flex-1 h-4">Version history</p>
                   <i class="fa-solid fa-caret-right opacity-65"></i>
@@ -308,8 +308,8 @@
                 </div>
                 <!-- move -->
                 <div class="menu-item">
-                  <div class="w-4 h-4">
-                    <i class="fa-regular fa-circle-check text-[15px]"></i>
+                  <div class="icon-size">
+                    <i class="fa-regular fa-circle-check i-size"></i>
                   </div>
                   <p class="flex-1 h-4">Make available offline</p>
                 </div>
@@ -317,18 +317,18 @@
               <!-- Seperator -->
               <hr />
               <!-- section5 -->
-              <div class="flex flex-col py-2">
+              <div class="menu-sec">
                 <!-- details -->
                 <div class="menu-item">
-                  <div class="w-4 h-4">
-                    <i class="fa-solid fa-circle-info text-[15px]"></i>
+                  <div class="icon-size">
+                    <i class="fa-solid fa-circle-info i-size"></i>
                   </div>
                   <p class="flex-1 h-4">Details</p>
                 </div>
                 <!-- setttings -->
                 <div class="menu-item">
-                  <div class="w-4 h-4">
-                    <i class="fa-solid fa-gear text-[15px]"></i>
+                  <div class="icon-size">
+                    <i class="fa-solid fa-gear i-size"></i>
                   </div>
                   <p class="flex-1 h-4">Settings</p>
                 </div>
@@ -336,11 +336,11 @@
               <!-- Seperator -->
               <hr />
               <!-- section6 -->
-              <div class="flex flex-col py-2">
+              <div class="menu-sec">
                 <!-- details -->
                 <div class="menu-item">
-                  <div class="w-4 h-4">
-                    <i class="fa-solid fa-print text-[15px]"></i>
+                  <div class="icon-size">
+                    <i class="fa-solid fa-print i-size"></i>
                   </div>
                   <p class="flex-1 h-4">Print</p>
                   <p class="opacity-70 h-4">Ctrl+P</p>
@@ -358,19 +358,19 @@
             <!-- dropdown file menu -->
             <div class="menu hidden group-hover:block">
               <!-- section1 -->
-              <div class="flex flex-col py-2">
+              <div class="menu-sec">
                 <!-- Undo -->
                 <div class="menu-item">
-                  <div class="w-4 h-4">
-                    <i class="fa-solid fa-undo text-[15px]"></i>
+                  <div class="icon-size">
+                    <i class="fa-solid fa-undo i-size"></i>
                   </div>
                   <p class="flex-1 h-4">Undo</p>
                   <p class="opacity-65">Ctrl+Z</p>
                 </div>
                 <!-- Redo -->
                 <div class="menu-item">
-                  <div class="w-4 h-4">
-                    <i class="fa-solid fa-redo text-[15px]"></i>
+                  <div class="icon-size">
+                    <i class="fa-solid fa-redo i-size"></i>
                   </div>
                   <p class="flex-1 h-4">Redo</p>
                   <p class="opacity-65">Ctrl+Y</p>
@@ -379,35 +379,35 @@
               <!-- Seperator -->
               <hr />
               <!-- section2 -->
-              <div class="flex flex-col py-2">
+              <div class="menu-sec">
                 <!-- Cut -->
                 <div class="menu-item">
-                  <div class="w-4 h-4">
-                    <i class="fa-solid fa-scissors text-[15px]"></i>
+                  <div class="icon-size">
+                    <i class="fa-solid fa-scissors i-size"></i>
                   </div>
                   <p class="flex-1 h-4">Cut</p>
                   <p class="opacity-65">Ctrl+X</p>
                 </div>
                 <!-- Copy -->
                 <div class="menu-item">
-                  <div class="w-4 h-4">
-                    <i class="fa-solid fa-copy text-[15px]"></i>
+                  <div class="icon-size">
+                    <i class="fa-solid fa-copy i-size"></i>
                   </div>
                   <p class="flex-1 h-4">Copy</p>
                   <p class="opacity-65">Ctrl+C</p>
                 </div>
                 <!-- Paste -->
                 <div class="menu-item">
-                  <div class="w-4 h-4">
-                    <i class="fa-regular fa-clipboard text-[15px]"></i>
+                  <div class="icon-size">
+                    <i class="fa-regular fa-clipboard i-size"></i>
                   </div>
                   <p class="flex-1 h-4">Paste</p>
                   <p class="opacity-65">Ctrl+V</p>
                 </div>
                 <!-- Paste Special -->
                 <div class="menu-item group/paste">
-                  <div class="w-4 h-4">
-                    <i class="fa-regular fa-clipboard text-[15px]"></i>
+                  <div class="icon-size">
+                    <i class="fa-regular fa-clipboard i-size"></i>
                   </div>
                   <p class="flex-1 h-4">Paste special</p>
                   <i class="fa-solid fa-caret-right opacity-65"></i>
@@ -416,7 +416,7 @@
                     class="menu top-0 left-80 w-64 hidden group-hover/paste:block"
                   >
                     <!-- subsection1 -->
-                    <div class="flex flex-col py-2">
+                    <div class="menu-sec">
                       <div class="menu-item">
                         <p class="flex-1 h-4">Values only</p>
                         <p class="h-4">Ctrl+Shift+V</p>
@@ -438,7 +438,7 @@
                     <!-- Seperator -->
                     <hr />
                     <!-- subsection2 -->
-                    <div class="flex flex-col py-2">
+                    <div class="menu-sec">
                       <div class="menu-item">
                         <p class="flex-1 h-4">Transposed</p>
                       </div>
@@ -446,7 +446,7 @@
                     <!-- Seperator -->
                     <hr />
                     <!-- subsection2 -->
-                    <div class="flex flex-col py-2">
+                    <div class="menu-sec">
                       <div class="menu-item">
                         <p class="flex-1 h-4">Column width only</p>
                       </div>
@@ -460,19 +460,19 @@
               <!-- Seperator -->
               <hr />
               <!-- section3 -->
-              <div class="flex flex-col py-2">
+              <div class="menu-sec">
                 <!-- Move -->
                 <div class="menu-item opacity-30 hover:bg-white">
-                  <div class="w-4 h-4">
-                    <i class="fa-solid fa-up-down-left-right text-[15px] opacity-30"></i>
+                  <div class="icon-size">
+                    <i class="fa-solid fa-up-down-left-right i-size opacity-30"></i>
                   </div>
                   <p class="flex-1 h-4">Move</p>
                   <i class="fa-solid fa-caret-right opacity-65"></i>
                 </div>
                 <!-- Delete -->
                 <div class="menu-item group/delete">
-                  <div class="w-4 h-4">
-                    <i class="fa-solid fa-trash-can text-[15px]"></i>
+                  <div class="icon-size">
+                    <i class="fa-solid fa-trash-can i-size"></i>
                   </div>
                   <p class="flex-1 h-4">Delete</p>
                   <i class="fa-solid fa-caret-right opacity-65"></i>
@@ -481,7 +481,7 @@
                     class="menu top-0 left-80 w-64 hidden group-hover/delete:block"
                   >
                     <!-- subsection1 -->
-                    <div class="flex flex-col py-2">
+                    <div class="menu-sec">
                       <div class="menu-item">
                         <p class="flex-1 h-4">Values</p>
                       </div>
@@ -516,11 +516,11 @@
               <!-- Seperator -->
               <hr />
               <!-- section4  -->
-              <div class="flex flex-col py-2">
+              <div class="menu-sec">
                 <!-- Find and replace -->
                 <div class="menu-item">
-                  <div class="w-4 h-4">
-                    <i class="fa-solid fa-rotate text-[15px]"></i>
+                  <div class="icon-size">
+                    <i class="fa-solid fa-rotate i-size"></i>
                   </div>
                   <p class="flex-1 h-4">Find and replace</p>
                   <p class="opacity-65">Ctrl+H</p>
@@ -538,11 +538,11 @@
             <!-- dropdown view menu -->
             <div class="menu hidden group-hover:block">
               <!-- section1 -->
-              <div class="flex flex-col py-2">
+              <div class="menu-sec">
                 <!-- Show -->
                 <div class="menu-item group/show">
-                  <div class="w-4 h-4">
-                    <i class="fa-regular fa-eye text-[15px]"></i>
+                  <div class="icon-size">
+                    <i class="fa-regular fa-eye i-size"></i>
                   </div>
                   <p class="flex-1 h-4">Show</p>
                   <i class="fa-solid fa-caret-right opacity-65"></i>
@@ -551,26 +551,26 @@
                     class="menu top-0 left-80 w-64 hidden group-hover/show:block"
                   >
                     <!-- subsection1 -->
-                    <div class="flex flex-col py-2">
+                    <div class="menu-sec">
                       <div class="menu-item">
-                        <div class="w-4 h-4">
-                          <i class="fa-solid fa-check text-[15px]"></i>
+                        <div class="icon-size">
+                          <i class="fa-solid fa-check i-size"></i>
                         </div>
                         <p class="flex-1 h-4">Formula bar</p>
                       </div>
                       <div class="menu-item">
-                        <div class="w-4 h-4">
-                          <i class="fa-solid fa-check text-[15px]"></i>
+                        <div class="icon-size">
+                          <i class="fa-solid fa-check i-size"></i>
                         </div>
                         <p class="flex-1 h-4">Gridlines</p>
                       </div>
                       <div class="menu-item">
-                        <div class="w-4 h-4"></div>
+                        <div class="icon-size"></div>
                         <p class="flex-1 h-4">Formulas</p>
                         <p class="h-4">Ctrl+`</p>
                       </div>
                       <div class="menu-item">
-                        <div class="w-4 h-4"></div>
+                        <div class="icon-size"></div>
                         <p class="flex-1 h-4">Protected ranges</p>
                       </div>
                     </div>
@@ -578,8 +578,8 @@
                 </div>
                 <!-- Freeze -->
                 <div class="menu-item group/freeze">
-                  <div class="w-4 h-4">
-                    <i class="fa-solid fa-arrow-down-up-lock text-[15px]"></i>
+                  <div class="icon-size">
+                    <i class="fa-solid fa-arrow-down-up-lock i-size"></i>
                   </div>
                   <p class="flex-1 h-4">Freeze</p>
                   <i class="fa-solid fa-caret-right opacity-65"></i>
@@ -588,7 +588,7 @@
                     class="menu top-0 left-80 w-64 hidden group-hover/freeze:block"
                   >
                     <!-- subsection1 -->
-                    <div class="flex flex-col py-2">
+                    <div class="menu-sec">
                       <div class="menu-item">
                         <p class="flex-1 h-4">No rows</p>
                       </div>
@@ -607,7 +607,7 @@
                     <!-- Seperator -->
                     <hr />
                     <!-- subsection2 -->
-                    <div class="flex flex-col py-2">
+                    <div class="menu-sec">
                       <div class="menu-item">
                         <p class="flex-1 h-4">No column</p>
                       </div>
@@ -627,8 +627,8 @@
                 </div>
                 <!-- Group -->
                 <div class="menu-item group/group">
-                  <div class="w-4 h-4">
-                    <i class="fa-regular fa-square-plus text-[15px]"></i>
+                  <div class="icon-size">
+                    <i class="fa-regular fa-square-plus i-size"></i>
                   </div>
                   <p class="flex-1 h-4">Group</p>
                   <i class="fa-solid fa-caret-right opacity-65"></i>
@@ -637,7 +637,7 @@
                     class="menu top-0 left-80 w-64 hidden group-hover/group:block"
                   >
                     <!-- subsection1 -->
-                    <div class="flex flex-col py-2">
+                    <div class="menu-sec">
                       <div class="menu-item">
                         <p class="flex-1 h-4">Group</p>
                         <p class="h-4">
@@ -657,11 +657,11 @@
               <!-- Seperator -->
               <hr />
               <!-- section3 -->
-              <div class="flex flex-col py-2">
+              <div class="menu-sec">
                 <!-- Hidden sheets -->
                 <div class="menu-item opacity-30 hover:bg-white">
-                  <div class="w-4 h-4">
-                    <i class="fa-solid fa-eye-slash text-[15px]"></i>
+                  <div class="icon-size">
+                    <i class="fa-solid fa-eye-slash i-size"></i>
                   </div>
                   <p class="flex-1 h-4">Hidden sheets</p>
                   <i class="fa-solid fa-caret-right opacity-65"></i>
@@ -670,12 +670,12 @@
               <!-- Seperator -->
               <hr />
               <!-- section4  -->
-              <div class="flex flex-col py-2">
+              <div class="menu-sec">
                 <!-- Zoom -->
                 <div class="menu-item group/zoom">
-                  <div class="w-4 h-4">
+                  <div class="icon-size">
                     <i
-                      class="fa-solid fa-magnifying-glass-plus text-[15px]"
+                      class="fa-solid fa-magnifying-glass-plus i-size"
                     ></i>
                   </div>
                   <p class="flex-1 h-4">Zoom</p>
@@ -685,42 +685,42 @@
                     class="menu top-0 left-80 w-24 hidden group-hover/zoom:block"
                   >
                     <!-- subsection1/zoom -->
-                    <div class="flex flex-col py-2">
+                    <div class="menu-sec">
                       <div class="menu-item">
-                        <div class="w-4 h-4"></div>
+                        <div class="icon-size"></div>
                         <p class="flex-1 h-4">50%</p>
                       </div>
                       <div class="menu-item">
-                        <div class="w-4 h-4"></div>
+                        <div class="icon-size"></div>
                         <p class="flex-1 h-4">75%</p>
                       </div>
                       <div class="menu-item">
-                        <div class="w-4 h-4"></div>
+                        <div class="icon-size"></div>
                         <p class="flex-1 h-4">90%</p>
                       </div>
                       <div class="menu-item">
-                        <div class="w-4 h-4">
-                          <i class="fa-solid fa-check text-[15px]"></i>
+                        <div class="icon-size">
+                          <i class="fa-solid fa-check i-size"></i>
                         </div>
                         <p class="flex-1 h-4">100%</p>
                       </div>
                       <div class="menu-item">
-                        <div class="w-4 h-4"></div>
+                        <div class="icon-size"></div>
                         <p class="flex-1 h-4">125%</p>
                       </div>
                       <div class="menu-item">
-                        <div class="w-4 h-4"></div>
+                        <div class="icon-size"></div>
                         <p class="flex-1 h-4">150%</p>
                       </div>
                       <div class="menu-item">
-                        <div class="w-4 h-4"></div>
+                        <div class="icon-size"></div>
                         <p class="flex-1 h-4">200%</p>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="menu-item">
-                  <i class="fa-solid fa-expand text-[15px]"></i>
+                  <i class="fa-solid fa-expand i-size"></i>
                   <p class="flex-1 h-4">Full screen</p>
                 </div>
               </div>
@@ -736,11 +736,11 @@
             <!-- dropdown file menu -->
             <div class="menu hidden group-hover:block">
               <!-- section1 -->
-              <div class="flex flex-col py-2">
+              <div class="menu-sec">
                 <!-- Cells/insert -->
                 <div class="menu-item group/cells">
-                  <div class="w-4 h-4">
-                    <i class="fa-regular fa-square text-[15px]"></i>
+                  <div class="icon-size">
+                    <i class="fa-regular fa-square i-size"></i>
                   </div>
                   <p class="flex-1 h-4">Cells</p>
                   <i class="fa-solid fa-caret-right opacity-65"></i>
@@ -758,8 +758,8 @@
                 </div>
                 <!-- Rows/insert -->
                 <div class="menu-item group/rows">
-                  <div class="w-4 h-4">
-                    <i class="fa-solid fa-table-list text-[15px]"></i>
+                  <div class="icon-size">
+                    <i class="fa-solid fa-table-list i-size"></i>
                   </div>
                   <p class="flex-1 h-4">Rows</p>
                   <i class="fa-solid fa-caret-right opacity-65"></i>
@@ -781,8 +781,8 @@
                 </div>
                 <!-- COlumns/insert -->
                 <div class="menu-item group/column">
-                  <div class="w-4 h-4">
-                    <i class="fa-solid fa-table-columns text-[15px]"></i>
+                  <div class="icon-size">
+                    <i class="fa-solid fa-table-columns i-size"></i>
                   </div>
                   <p class="flex-1 h-4">Columns</p>
                   <i class="fa-solid fa-caret-right opacity-65"></i>
@@ -804,8 +804,8 @@
                 </div>
                 <!-- sheet /insert-->
                 <div class="menu-item">
-                  <div class="w-4 h-4">
-                    <i class="fa-solid fa-sheet-plastic text-[15px]"></i>
+                  <div class="icon-size">
+                    <i class="fa-solid fa-sheet-plastic i-size"></i>
                   </div>
                   <p class="flex-1 h-4">Sheet</p>
                   <p class="opacity-65">Shift+F11</p>
@@ -814,25 +814,25 @@
               <!-- Seperator -->
               <hr />
               <!-- section2 -->
-              <div class="flex flex-col py-2">
+              <div class="menu-sec">
                 <!-- chart /insert-->
                 <div class="menu-item">
-                  <div class="w-4 h-4">
-                    <i class="fa-solid fa-chart-column text-[15px]"></i>
+                  <div class="icon-size">
+                    <i class="fa-solid fa-chart-column i-size"></i>
                   </div>
                   <p class="flex-1 h-4">Chart</p>
                 </div>
                 <!-- Pivot table /insert-->
                 <div class="menu-item">
-                  <div class="w-4 h-4">
-                    <i class="fa-solid fa-table-cells text-[15px]"></i>
+                  <div class="icon-size">
+                    <i class="fa-solid fa-table-cells i-size"></i>
                   </div>
                   <p class="flex-1 h-4">Pivot table</p>
                 </div>
                 <!-- Image/insert -->
                 <div class="menu-item group/download">
-                  <div class="w-4 h-4">
-                    <i class="fa-solid fa-image text-[15px]"></i>
+                  <div class="icon-size">
+                    <i class="fa-solid fa-image i-size"></i>
                   </div>
                   <p class="flex-1 h-4">Image</p>
                   <i class="fa-solid fa-caret-right opacity-65"></i>
@@ -850,8 +850,8 @@
                 </div>
                 <!-- Drawing /insert-->
                 <div class="menu-item">
-                  <div class="w-4 h-4">
-                    <i class="fa-solid fa-paint-brush text-[15px]"></i>
+                  <div class="icon-size">
+                    <i class="fa-solid fa-paint-brush i-size"></i>
                   </div>
                   <p class="flex-1 h-4">Drawing</p>
                 </div>
@@ -859,14 +859,14 @@
               <!-- Seperator -->
               <hr />
               <!-- section3 -->
-              <div class="flex flex-col py-2">
+              <div class="menu-sec">
                 <!-- Function/insert -->
                 <div class="menu-item group/download">
-                  <div class="w-4 h-4">
+                  <div class="icon-size">
                     <img
                       src="./assets/functions_FILL0_wght400_GRAD0_opsz24.png"
                       alt=""
-                      class="w-4 h-4"
+                      class="icon-size"
                     />
                   </div>
                   <p class="flex-1 h-4">Function</p>
@@ -894,8 +894,8 @@
                 </div>
                 <!-- link /insert-->
                 <div class="menu-item">
-                  <div class="w-4 h-4">
-                    <i class="fa-solid fa-link text-[15px]"></i>
+                  <div class="icon-size">
+                    <i class="fa-solid fa-link i-size"></i>
                   </div>
                   <p class="flex-1 h-4">Link</p>
                   <p class="opacity-65">Ctrl+K</p>
@@ -904,32 +904,32 @@
               <!-- Seperator -->
               <hr />
               <!-- section4  -->
-              <div class="flex flex-col py-2">
+              <div class="menu-sec">
                 <!-- checkbox -->
                 <div class="menu-item">
-                  <div class="w-4 h-4">
-                    <i class="fa-regular fa-square-check text-[15px]"></i>
+                  <div class="icon-size">
+                    <i class="fa-regular fa-square-check i-size"></i>
                   </div>
                   <p class="flex-1 h-4">Checkbox</p>
                 </div>
                 <!-- dropdown -->
                 <div class="menu-item">
-                  <div class="w-4 h-4">
-                    <i class="fa-regular fa-square-caret-down text-[15px]"></i>
+                  <div class="icon-size">
+                    <i class="fa-regular fa-square-caret-down i-size"></i>
                   </div>
                   <p class="flex-1 h-4">Dropdown</p>
                 </div>
                 <!-- emoji -->
                 <div class="menu-item">
-                  <div class="w-4 h-4">
-                    <i class="fa-regular fa-face-smile text-[15px]"></i>
+                  <div class="icon-size">
+                    <i class="fa-regular fa-face-smile i-size"></i>
                   </div>
                   <p class="flex-1 h-4">Emoji</p>
                 </div>
                 <!-- smart chips -->
                 <div class="menu-item group/smart">
-                  <div class="w-4 h-4">
-                    <i class="fa-solid fa-diagram-predecessor text-[15px]"></i>
+                  <div class="icon-size">
+                    <i class="fa-solid fa-diagram-predecessor i-size"></i>
                   </div>
                   <p class="flex-1 h-4">Smart chips</p>
                   <div class="w-2 h-2 rounded bg-green-700"></div>
@@ -963,19 +963,19 @@
               <!-- Seperator -->
               <hr />
               <!-- section5 -->
-              <div class="flex flex-col py-2">
+              <div class="menu-sec">
                 <!-- comment -->
                 <div class="menu-item">
-                  <div class="w-4 h-4">
-                    <i class="fa-regular fa-message text-[15px]"></i>
+                  <div class="icon-size">
+                    <i class="fa-regular fa-message i-size"></i>
                   </div>
                   <p class="flex-1 h-4">Comment</p>
                   <p class="opacity-70 h-4">Ctrl+Alt+M</p>
                 </div>
                 <!-- Note -->
                 <div class="menu-item">
-                  <div class="w-4 h-4">
-                    <i class="fa-regular fa-note-sticky text-[15px]"></i>
+                  <div class="icon-size">
+                    <i class="fa-regular fa-note-sticky i-size"></i>
                   </div>
                   <p class="flex-1 h-4">Note</p>
                   <p class="opacity-70 h-4">Shift+F2</p>
@@ -1011,14 +1011,14 @@
         <div
           class="hover:bg-gray-200 p-2 rounded-full cursor-pointer group relative"
         >
-          <img src="./assets/restore_black_24dp.svg" alt="" class="w-6 h-6" />
+          <img src="./assets/restore_black_24dp.svg" alt="" class="xl:w-6 xl:h-6 w-5 h-5" />
           <div class="-left-[120%] tooltip">Last edit was 3 days ago</div>
         </div>
         <!-- ─── Comments ───────────────────── ✣ ─ -->
         <div
           class="hover:bg-gray-200 p-2 rounded-full cursor-pointer group relative"
         >
-          <img src="./assets/comment_black_24dp.svg" alt="" class="w-6 h-6" />
+          <img src="./assets/comment_black_24dp.svg" alt="" class="xl:w-6 xl:h-6 w-5 h-5" />
           <div class="-left-[220%] tooltip">
             Open comments history (Ctrl+Shift+Alt+A)
           </div>
@@ -1027,8 +1027,8 @@
         <div
           class="flex items-center gap-2 hover:bg-gray-200 py-2 px-2.5 rounded-full cursor-pointer group relative"
         >
-          <img src="./assets/google-meet.svg" alt="" class="w-6 h-6" />
-          <i class="fa-solid fa-caret-down text-sm"></i>
+          <img src="./assets/google-meet.svg" alt="" class="xl:w-6 xl:h-6 w-5 h-5" />
+          <i class="fa-solid fa-caret-down text-xs xl:text-sm"></i>
           <div class="-left-[120%] tooltip">
             Join a call or present this tab to a call
           </div>
@@ -1042,7 +1042,7 @@
               <img
                 src="./assets/lock_FILL0_wght400_GRAD0_opsz24.svg"
                 alt=""
-                class="w-4 h-4"
+                class="icon-size"
               />
             </div>
 
@@ -1052,7 +1052,7 @@
           <div
             class="flex items-center bg-sky-200 hover:bg-[#b2d7ef] py-2 px-4 rounded-r-full cursor-pointer group relative"
           >
-            <i class="fa-solid fa-caret-down text-sm"></i>
+            <i class="fa-solid fa-caret-down text-xs xl:text-sm"></i>
             <div class="tooltip -left-[120%]">Open sharing actions</div>
           </div>
         </div>
