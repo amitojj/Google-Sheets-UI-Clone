@@ -2,14 +2,14 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=1024, initial-scale=0.8" />
+    <meta name="viewport" content="width=1024" />
     <meta name="description" content="" />
     <meta name="author" content="Amit Kumar" />
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Lato&family=Ubuntu&family=Caveat&family=Comfortaa&family=Amatic+SC&family=EB+Garamond&family=Lexend&family=Source+Sans+3&family=Roboto+Serif&family=Roboto+Mono&family=Proxima+Nova&family=Playfair+Display&family=Pacifico&family=Oswald&family=Nunito&family=Lobster&family=Lora&family=Merriweather&family=Montserrat&family=Varela+Round&family=Spectral&display=swap"
       rel="stylesheet"
     />
     <link
@@ -29,6 +29,23 @@
         box-sizing: border-box;
         min-width: 0;
         min-height: 0;
+      }
+      ::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        border-radius: 6px;
+
+        background-color: #ffffff;
+      }
+
+      ::-webkit-scrollbar {
+        width: 6px;
+        background-color: #ffffff;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        border-radius: 6px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        background-color: #afafaf;
       }
     </style>
   </head>
@@ -2114,8 +2131,8 @@
         </div>
       </div>
     </nav>
-    <!-- ─── Menubar ─────────────────────────────────────── ✣ ─ -->
-    <div class="w-full my-3 px-3 text-sm">
+<!-- ─── Menubar ─────────────────────────────────────── ✣ ─ -->
+    <div class="w-full my-3 px-3 text-[10px] xl:text-xs 2xl:text-sm">
       <div class="w-full h-10 bg-[#edf2fa] rounded-full flex items-center px-3">
         <!-- ─────────────────────────────────────────── ✣ ─ -->
         <div
@@ -2171,13 +2188,13 @@
         <div class="h-3/5 border-l border-gray-300 mx-1"></div>
         <!--$ ─────────────────────────────────────────── ✣ ─ -->
         <div class="group icons">
-          <p class="">$</p>
+          <p class="xl:font-semibold">$</p>
           <!-- tooltip -->
           <div class="left-0 tooltip">Format as currency</div>
         </div>
         <!--% ─────────────────────────────────────────── ✣ ─ -->
         <div class="group icons">
-          <p class="">%</p>
+          <p class="xl:font-semibold">%</p>
           <!-- tooltip -->
           <div class="left-0 tooltip">Format as Percent</div>
         </div>
@@ -2186,7 +2203,7 @@
           <img
             src="./assets/decimal_decrease_FILL0_wght400_GRAD0_opsz24.png"
             alt=""
-            class="w-5 h-5"
+            class="w-3  xl:w-4 2xl:w-5 "
           />
           <!-- tooltip -->
           <div class="left-0 tooltip">Decrease decimal places</div>
@@ -2196,20 +2213,662 @@
           <img
             src="./assets/decimal_increase_FILL0_wght400_GRAD0_opsz24.png"
             alt=""
-            class="w-5 h-5"
+            class="w-3 xl:w-4 2xl:w-5 "
           />
           <!-- tooltip -->
           <div class="left-0 tooltip">Increase decimal places</div>
         </div>
         <!--123 ─────────────────────────────────────────── ✣ ─ -->
         <div class="group icons">
-          <p class="">123</p>
+          <p class="xl:font-semibold">123</p>
           <!-- tooltip -->
           <div class="left-0 tooltip">More Formats</div>
         </div>
         <!-- ─── Seperater ───────────────────── ✣ ─ -->
         <div class="h-3/5 border-l border-gray-300 mx-1"></div>
+        <!--font ─────────────────────────────────────────── ✣ ─ -->
+        <div class="group icons flex items-center px-3 gap-1">
+          <p class="font-medium opacity-75">Defaul...</p>
+          <i class="fa-solid fa-angle-down text-xs"></i>
+          <!-- tooltip -->
+          <div class="left-0 tooltip">Fonts</div>
+          <div class="menu w-52 top-[100%] hidden group-hover:block">
+            <!-- section -->
+            <div class="sect">
+              <!-- ─── ✣ ─ -->
+              <div class="menu-item">
+                <div class="icon-size">
+                  <i class="fa-solid fa-font i-size"></i>
+                </div>
+                <p class="flex-1 h-4">More Fonts</p>
+              </div>
+            </div>
+            <!-- Seperator -->
+            <hr />
+            <div class="sect">
+              <!-- ─── ✣ ─ -->
+              <div class="menu-item">
+                <p class="flex-1 h-4 text-xs font-semibold">THEME</p>
+              </div>
+              <div class="menu-item">
+                <div class="icon-size">
+                  <i class="fa-solid fa-check i-size"></i>
+                </div>
+                <p class="flex-1 h-4 font-['Arial']">Default (Arial)</p>
+              </div>
+            </div>
+            <!-- Seperator -->
+            <hr />
+            <div class="sect">
+              <!-- ─── ✣ ─ -->
+              <div class="menu-item">
+                <p class="flex-1 h-4 text-xs font-semibold">Recent</p>
+              </div>
+              <div class="menu-item">
+                <div class="icon-size"></div>
+                <p class="flex-1 h-4 font-['Arial']">Arial</p>
+              </div>
+              <div class="menu-item">
+                <div class="icon-size"></div>
+                <p class="flex-1 h-4 font-['Cambria']">Cambria</p>
+              </div>
+              <div class="menu-item">
+                <div class="icon-size"></div>
+                <p class="flex-1 h-4 font-['Comic_Sans_MS']">Comic Sans MS</p>
+              </div>
+              <div class="menu-item">
+                <div class="icon-size"></div>
+                <p class="flex-1 h-4 font-['Lato']">Lato</p>
+              </div>
+              <div class="menu-item">
+                <div class="icon-size"></div>
+                <p class="flex-1 h-4 font-['Ubuntu']">Ubuntu</p>
+              </div>
+            </div>
+            <!-- Seperator -->
+            <hr />
+            <div class="sect flex-shrink-0 overflow-y-scroll max-h-[40vh]">
+              <!-- ─── ✣ ─ -->
+
+              <div class="menu-item">
+                <div class="icon-size"></div>
+                <p class="flex-1 h-4 font-['Amatic_SC']">Amatic SC</p>
+              </div>
+              <div class="menu-item">
+                <div class="icon-size"></div>
+                <p class="flex-1 h-4 font-['Arial']">Arial</p>
+              </div>
+              <div class="menu-item">
+                <div class="icon-size"></div>
+                <p class="flex-1 h-4 font-['Calibri']">Calibri</p>
+              </div>
+              <div class="menu-item">
+                <div class="icon-size"></div>
+                <p class="flex-1 h-4 font-['Cambria']">Cambria</p>
+              </div>
+              <div class="menu-item">
+                <div class="icon-size"></div>
+                <p class="flex-1 h-4 font-['Caveat']">Caveat</p>
+              </div>
+              <div class="menu-item">
+                <div class="icon-size"></div>
+                <p class="flex-1 h-4 font-['Comfortaa']">Comfortaa</p>
+              </div>
+              <div class="menu-item">
+                <div class="icon-size"></div>
+                <p class="flex-1 h-4 font-['Comic_Sans_MS']">Comic Sans MS</p>
+              </div>
+              <div class="menu-item">
+                <div class="icon-size"></div>
+                <p class="flex-1 h-4 font-['Courier_New']">Courier New</p>
+              </div>
+              <div class="menu-item">
+                <div class="icon-size"></div>
+                <p class="flex-1 h-4 font-['EB_Garamond']">EB Garamond</p>
+              </div>
+              <div class="menu-item">
+                <div class="icon-size"></div>
+                <p class="flex-1 h-4 font-['Georgia']">Georgia</p>
+              </div>
+              <div class="menu-item">
+                <div class="icon-size"></div>
+                <p class="flex-1 h-4 font-['Impact']">Impact</p>
+              </div>
+              <div class="menu-item">
+                <div class="icon-size"></div>
+                <p class="flex-1 h-4 font-['Lato']">Lato</p>
+              </div>
+              <div class="menu-item">
+                <div class="icon-size"></div>
+                <p class="flex-1 h-4 font-['Lexend']">Lexend</p>
+              </div>
+              <div class="menu-item">
+                <div class="icon-size"></div>
+                <p class="flex-1 h-4 font-['Lobster']">Lobster</p>
+              </div>
+              <div class="menu-item">
+                <div class="icon-size"></div>
+                <p class="flex-1 h-4 font-['Lora']">Lora</p>
+              </div>
+              <div class="menu-item">
+                <div class="icon-size"></div>
+                <p class="flex-1 h-4 font-['Merriweather']">Merriweather</p>
+              </div>
+              <div class="menu-item">
+                <div class="icon-size"></div>
+                <p class="flex-1 h-4 font-['Montserrat']">Montserrat</p>
+              </div>
+              <div class="menu-item">
+                <div class="icon-size"></div>
+                <p class="flex-1 h-4 font-['Nunito']">Nunito</p>
+              </div>
+              <div class="menu-item">
+                <div class="icon-size"></div>
+                <p class="flex-1 h-4 font-['Oswald']">Oswald</p>
+              </div>
+              <div class="menu-item">
+                <div class="icon-size"></div>
+                <p class="flex-1 h-4 font-['Pacifico']">Pacifico</p>
+              </div>
+              <div class="menu-item">
+                <div class="icon-size"></div>
+                <p class="flex-1 h-4 font-['Playfair_Display']">
+                  Playfair Display
+                </p>
+              </div>
+              <div class="menu-item">
+                <div class="icon-size"></div>
+                <p class="flex-1 h-4 font-['Proxima_Nova']">Proxima Nova</p>
+              </div>
+              <div class="menu-item">
+                <div class="icon-size"></div>
+                <p class="flex-1 h-4 font-['Roboto']">Roboto</p>
+              </div>
+              <div class="menu-item">
+                <div class="icon-size"></div>
+                <p class="flex-1 h-4 font-['Roboto_Mono']">Roboto Mono</p>
+              </div>
+              <div class="menu-item">
+                <div class="icon-size"></div>
+                <p class="flex-1 h-4 font-['Roboto_Serif']">Roboto Serif</p>
+              </div>
+              <div class="menu-item">
+                <div class="icon-size"></div>
+                <p class="flex-1 h-4 font-['Source_Sans_3']">Source Sans Pro</p>
+              </div>
+              <div class="menu-item">
+                <div class="icon-size"></div>
+                <p class="flex-1 h-4 font-['Spectral']">Spectral</p>
+              </div>
+              <div class="menu-item">
+                <div class="icon-size"></div>
+                <p class="flex-1 h-4 font-['Times_New_Roman']">
+                  Times New Roman
+                </p>
+              </div>
+              <div class="menu-item">
+                <div class="icon-size"></div>
+                <p class="flex-1 h-4 font-['Trebuchet_MS']">Trebuchet MS</p>
+              </div>
+              <div class="menu-item">
+                <div class="icon-size"></div>
+                <p class="flex-1 h-4 font-['Ubuntu']">Ubuntu</p>
+              </div>
+              <div class="menu-item">
+                <div class="icon-size"></div>
+                <p class="flex-1 h-4 font-['Varela Round']">Varela Round</p>
+              </div>
+              <div class="menu-item">
+                <div class="icon-size"></div>
+                <p class="flex-1 h-4 font-['Verdana']">Verdana</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ─── Seperater ───────────────────── ✣ ─ -->
+        <div class="h-3/5 border-l border-gray-300 mx-1"></div>
+        <!--minus ─────────────────────────────────────────── ✣ ─ -->
+        <div class="group icons">
+          <i class="fa-solid fa-minus"></i>
+          <!-- tooltip -->
+          <div class="left-0 tooltip">Decrease font size (Ctrl+Shift+,)</div>
+        </div>
+        <!--10 ─────────────────────────────────────────── ✣ ─ -->
+        <div class="group icons">
+          <input
+            type="text"
+            value="10"
+            class="w-9 bg-[#edf2fa] leading-3 px-2 py-0.5 rounded-[4px] border border-black"
+          />
+          <!-- tooltip -->
+          <div class="left-0 tooltip">Font Size</div>
+        </div>
+        <!--plus ─────────────────────────────────────────── ✣ ─ -->
+        <div class="group icons">
+          <i class="fa-solid fa-plus"></i>
+          <!-- tooltip -->
+          <div class="left-0 tooltip">Increase font size (Ctrl+Shift+.)</div>
+        </div>
+        <!-- ─── Seperater ───────────────────── ✣ ─ -->
+        <div class="h-3/5 border-l border-gray-300 mx-1"></div>
+        <!--Bold ─────────────────────────────────────────── ✣ ─ -->
+        <div class="group icons">
+          <i class="fa-solid fa-bold"></i>
+          <!-- tooltip -->
+          <div class="left-0 tooltip">Bold (Ctrl+B)</div>
+        </div>
+        <!--Italic ─────────────────────────────────────────── ✣ ─ -->
+        <div class="group icons">
+          <i class="fa-solid fa-italic"></i>
+          <!-- tooltip -->
+          <div class="left-0 tooltip">Italic (Ctrl+I)</div>
+        </div>
+        <!--Strikethrough ─────────────────────────────────────────── ✣ ─ -->
+        <div class="group icons">
+          <i class="fa-solid fa-strikethrough"></i>
+          <!-- tooltip -->
+          <div class="left-0 tooltip">Strikethrough (Alt+Shift+B)</div>
+        </div>
+        <!--font color ─────────────────────────────────────────── ✣ ─ -->
+        <div class="group icons">
+          <img
+            src="./assets/format_color_text_FILL0_wght400_GRAD0_opsz24.png"
+            alt=""
+            class="w-3 xl:w-4 2xl:w-5 "
+          />
+          <!-- tooltip -->
+          <div
+            class="menu w-[264px] min-h-72 py-3 top-[100%] cursor-auto hidden group-hover:block"
+          >
+            <div class="menu-item">
+              <i class="fa-solid fa-droplet-slash"></i>
+              <p class="flex-1 h-4 text-[16px] font-medium opacity-75">Reset</p>
+            </div>
+            <!-- color-grid -->
+            <div
+              class="grid grid-cols-10 grid-rows-8 grid-flow-rows gap-[2px] p-4"
+            >
+              <div class="colordot bg-black flex justify-center items-center">
+                <i class="fa-solid fa-check text-white"></i>
+              </div>
+              <div class="colordot bg-[#434343]"></div>
+              <div class="colordot bg-[#666666]"></div>
+              <div class="colordot bg-[#999999]"></div>
+              <div class="colordot bg-[#b7b7b7]"></div>
+              <div class="colordot bg-[#cccccc]"></div>
+              <div class="colordot bg-[#d9d9d9]"></div>
+              <div class="colordot bg-[#efefef]"></div>
+              <div class="colordot bg-[#f3f3f3]"></div>
+              <div class="colordot bg-[#ffffff]"></div>
+              <!-- row-2 -->
+              <div class="colordot bg-[#980000]"></div>
+              <div class="colordot bg-[#ff0000]"></div>
+              <div class="colordot bg-[#ff9900]"></div>
+              <div class="colordot bg-[#ffff00]"></div>
+              <div class="colordot bg-[#00ff00]"></div>
+              <div class="colordot bg-[#00ffff]"></div>
+              <div class="colordot bg-[#4a86e8]"></div>
+              <div class="colordot bg-[#0000ff]"></div>
+              <div class="colordot bg-[#9900ff]"></div>
+              <div class="colordot bg-[#ff00ff]"></div>
+              <!-- row-3 -->
+              <div class="colordot bg-[#e6b8af]"></div>
+              <div class="colordot bg-[#f4cccc]"></div>
+              <div class="colordot bg-[#fce5cd]"></div>
+              <div class="colordot bg-[#fff2cc]"></div>
+              <div class="colordot bg-[#d9ead3]"></div>
+              <div class="colordot bg-[#d0e0e3]"></div>
+              <div class="colordot bg-[#c9daf8]"></div>
+              <div class="colordot bg-[#cfe2f3]"></div>
+              <div class="colordot bg-[#d9d2e9]"></div>
+              <div class="colordot bg-[#ead1dc]"></div>
+              <!-- row-4 -->
+              <div class="colordot bg-[#dd7e6b]"></div>
+              <div class="colordot bg-[#ea9999]"></div>
+              <div class="colordot bg-[#f9cb9c]"></div>
+              <div class="colordot bg-[#ffe599]"></div>
+              <div class="colordot bg-[#b6d7a8]"></div>
+              <div class="colordot bg-[#a2c4c9]"></div>
+              <div class="colordot bg-[#a4c2f4]"></div>
+              <div class="colordot bg-[#9fc5e8]"></div>
+              <div class="colordot bg-[#b4a7d6]"></div>
+              <div class="colordot bg-[#d5a6bd]"></div>
+
+              <!-- row-5 -->
+              <div class="colordot bg-[#cc4125]"></div>
+              <div class="colordot bg-[#e06666]"></div>
+              <div class="colordot bg-[#f6b26b]"></div>
+              <div class="colordot bg-[#ffd966]"></div>
+              <div class="colordot bg-[#93c47d]"></div>
+              <div class="colordot bg-[#76a5af]"></div>
+              <div class="colordot bg-[#6d9eeb]"></div>
+              <div class="colordot bg-[#6fa8dc]"></div>
+              <div class="colordot bg-[#8e7cc3]"></div>
+              <div class="colordot bg-[#c27ba0]"></div>
+              <!-- row-6 -->
+              <div class="colordot bg-[#a61c00]"></div>
+              <div class="colordot bg-[#cc0000]"></div>
+              <div class="colordot bg-[#e69138]"></div>
+              <div class="colordot bg-[#f1c232]"></div>
+              <div class="colordot bg-[#6aa84f]"></div>
+              <div class="colordot bg-[#45818e]"></div>
+              <div class="colordot bg-[#3c78d8]"></div>
+              <div class="colordot bg-[#3d85c6]"></div>
+              <div class="colordot bg-[#674ea7]"></div>
+              <div class="colordot bg-[#a64d79]"></div>
+              <!-- row-7 -->
+              <div class="colordot bg-[#85200c]"></div>
+              <div class="colordot bg-[#990000]"></div>
+              <div class="colordot bg-[#b45f06]"></div>
+              <div class="colordot bg-[#bf9000]"></div>
+              <div class="colordot bg-[#38761d]"></div>
+              <div class="colordot bg-[#134f5c]"></div>
+              <div class="colordot bg-[#1155cc]"></div>
+              <div class="colordot bg-[#0b5394]"></div>
+              <div class="colordot bg-[#351c75]"></div>
+              <div class="colordot bg-[#741b47]"></div>
+              <!-- row-8 -->
+              <div class="colordot bg-[#5b0f00]"></div>
+              <div class="colordot bg-[#660000]"></div>
+              <div class="colordot bg-[#783f04]"></div>
+              <div class="colordot bg-[#7f6000]"></div>
+              <div class="colordot bg-[#274e13]"></div>
+              <div class="colordot bg-[#0c343d]"></div>
+              <div class="colordot bg-[#1c4587]"></div>
+              <div class="colordot bg-[#073763]"></div>
+              <div class="colordot bg-[#20124d]"></div>
+              <div class="colordot bg-[#4c1130]"></div>
+            </div>
+            <!-- standard pallet -->
+            <div class="flex justify-start items-center gap-3 px-4 py-2">
+              <p class="h-4 text-[12px] font-semibold">STANDARD</p>
+              <i class="fa-solid fa-pencil icons"></i>
+            </div>
+            <div class="px-3 pt-1 pb-2 flex justify-start gap-[2px]">
+              <div class="colordot bg-[#000000]"></div>
+              <div class="colordot bg-[#ffffff]"></div>
+              <div class="colordot bg-[#4285f4]"></div>
+              <div class="colordot bg-[#ea4335]"></div>
+              <div class="colordot bg-[#fbbc04]"></div>
+              <div class="colordot bg-[#34a853]"></div>
+              <div class="colordot bg-[#ff6d01]"></div>
+              <div class="colordot bg-[#46bdc6]"></div>
+            </div>
+            <!-- ─── Seperater ───────────────────── ✣ ─ -->
+            <hr />
+            <!-- custom pallet -->
+            <div class="flex justify-between items-center gap-3 px-4 py-2">
+              <p class="h-4 text-[12px] font-semibold">CUSTOM</p>
+            </div>
+            <div class="px-3 py-1 flex justify-start items-center gap-2 pb-2">
+              <div
+                class="colordot w-4 h-4 border-black bg-[#ffffff] flex justify-center items-center hover:bg-[#e0e5eb]"
+              >
+                <i class="fa-solid fa-plus text-xs"></i>
+              </div>
+              <i class="fa-solid fa-eye-dropper icons"></i>
+            </div>
+            <!-- ─── Seperater ───────────────────── ✣ ─ -->
+            <hr />
+            <!-- more -->
+            <div class="flex justify-center items-center pt-3 menu-item">
+              <p class="font-semibold">Conditional formatting</p>
+            </div>
+          </div>
+        </div>
+        <!-- ─── Seperater ───────────────────── ✣ ─ -->
+        <div class="h-3/5 border-l border-gray-300 mx-1"></div>
+        <!--Fill color ─────────────────────────────────────────── ✣ ─ -->
+        <div class="group icons">
+          <i class="fa-solid fa-fill-drip"></i>
+          <!-- tooltip -->
+          <div
+            class="menu w-[264px] min-h-72 py-3 top-[100%] cursor-auto hidden group-hover:block"
+          >
+            <div class="menu-item">
+              <i class="fa-solid fa-droplet-slash"></i>
+              <p class="flex-1 h-4 text-[16px] font-medium opacity-75">Reset</p>
+            </div>
+            <!-- color-grid -->
+            <div
+              class="grid grid-cols-10 grid-rows-8 grid-flow-rows gap-[2px] p-4"
+            >
+              <div class="colordot bg-[#000000]"></div>
+              <div class="colordot bg-[#434343]"></div>
+              <div class="colordot bg-[#666666]"></div>
+              <div class="colordot bg-[#999999]"></div>
+              <div class="colordot bg-[#b7b7b7]"></div>
+              <div class="colordot bg-[#cccccc]"></div>
+              <div class="colordot bg-[#d9d9d9]"></div>
+              <div class="colordot bg-[#efefef]"></div>
+              <div class="colordot bg-[#f3f3f3]"></div>
+              <div class="colordot bg-white flex justify-center items-center">
+                <i class="fa-solid fa-check text-black"></i>
+              </div>
+              <!-- row-2 -->
+              <div class="colordot bg-[#980000]"></div>
+              <div class="colordot bg-[#ff0000]"></div>
+              <div class="colordot bg-[#ff9900]"></div>
+              <div class="colordot bg-[#ffff00]"></div>
+              <div class="colordot bg-[#00ff00]"></div>
+              <div class="colordot bg-[#00ffff]"></div>
+              <div class="colordot bg-[#4a86e8]"></div>
+              <div class="colordot bg-[#0000ff]"></div>
+              <div class="colordot bg-[#9900ff]"></div>
+              <div class="colordot bg-[#ff00ff]"></div>
+              <!-- row-3 -->
+              <div class="colordot bg-[#e6b8af]"></div>
+              <div class="colordot bg-[#f4cccc]"></div>
+              <div class="colordot bg-[#fce5cd]"></div>
+              <div class="colordot bg-[#fff2cc]"></div>
+              <div class="colordot bg-[#d9ead3]"></div>
+              <div class="colordot bg-[#d0e0e3]"></div>
+              <div class="colordot bg-[#c9daf8]"></div>
+              <div class="colordot bg-[#cfe2f3]"></div>
+              <div class="colordot bg-[#d9d2e9]"></div>
+              <div class="colordot bg-[#ead1dc]"></div>
+              <!-- row-4 -->
+              <div class="colordot bg-[#dd7e6b]"></div>
+              <div class="colordot bg-[#ea9999]"></div>
+              <div class="colordot bg-[#f9cb9c]"></div>
+              <div class="colordot bg-[#ffe599]"></div>
+              <div class="colordot bg-[#b6d7a8]"></div>
+              <div class="colordot bg-[#a2c4c9]"></div>
+              <div class="colordot bg-[#a4c2f4]"></div>
+              <div class="colordot bg-[#9fc5e8]"></div>
+              <div class="colordot bg-[#b4a7d6]"></div>
+              <div class="colordot bg-[#d5a6bd]"></div>
+
+              <!-- row-5 -->
+              <div class="colordot bg-[#cc4125]"></div>
+              <div class="colordot bg-[#e06666]"></div>
+              <div class="colordot bg-[#f6b26b]"></div>
+              <div class="colordot bg-[#ffd966]"></div>
+              <div class="colordot bg-[#93c47d]"></div>
+              <div class="colordot bg-[#76a5af]"></div>
+              <div class="colordot bg-[#6d9eeb]"></div>
+              <div class="colordot bg-[#6fa8dc]"></div>
+              <div class="colordot bg-[#8e7cc3]"></div>
+              <div class="colordot bg-[#c27ba0]"></div>
+              <!-- row-6 -->
+              <div class="colordot bg-[#a61c00]"></div>
+              <div class="colordot bg-[#cc0000]"></div>
+              <div class="colordot bg-[#e69138]"></div>
+              <div class="colordot bg-[#f1c232]"></div>
+              <div class="colordot bg-[#6aa84f]"></div>
+              <div class="colordot bg-[#45818e]"></div>
+              <div class="colordot bg-[#3c78d8]"></div>
+              <div class="colordot bg-[#3d85c6]"></div>
+              <div class="colordot bg-[#674ea7]"></div>
+              <div class="colordot bg-[#a64d79]"></div>
+              <!-- row-7 -->
+              <div class="colordot bg-[#85200c]"></div>
+              <div class="colordot bg-[#990000]"></div>
+              <div class="colordot bg-[#b45f06]"></div>
+              <div class="colordot bg-[#bf9000]"></div>
+              <div class="colordot bg-[#38761d]"></div>
+              <div class="colordot bg-[#134f5c]"></div>
+              <div class="colordot bg-[#1155cc]"></div>
+              <div class="colordot bg-[#0b5394]"></div>
+              <div class="colordot bg-[#351c75]"></div>
+              <div class="colordot bg-[#741b47]"></div>
+              <!-- row-8 -->
+              <div class="colordot bg-[#5b0f00]"></div>
+              <div class="colordot bg-[#660000]"></div>
+              <div class="colordot bg-[#783f04]"></div>
+              <div class="colordot bg-[#7f6000]"></div>
+              <div class="colordot bg-[#274e13]"></div>
+              <div class="colordot bg-[#0c343d]"></div>
+              <div class="colordot bg-[#1c4587]"></div>
+              <div class="colordot bg-[#073763]"></div>
+              <div class="colordot bg-[#20124d]"></div>
+              <div class="colordot bg-[#4c1130]"></div>
+            </div>
+            <!-- standard pallet -->
+            <div class="flex justify-start items-center gap-3 px-4 py-2">
+              <p class="h-4 text-[12px] font-semibold">STANDARD</p>
+              <i class="fa-solid fa-pencil icons"></i>
+            </div>
+            <div class="px-3 pt-1 pb-2 flex justify-start gap-[2px]">
+              <div class="colordot bg-[#000000]"></div>
+              <div class="colordot bg-[#ffffff]"></div>
+              <div class="colordot bg-[#4285f4]"></div>
+              <div class="colordot bg-[#ea4335]"></div>
+              <div class="colordot bg-[#fbbc04]"></div>
+              <div class="colordot bg-[#34a853]"></div>
+              <div class="colordot bg-[#ff6d01]"></div>
+              <div class="colordot bg-[#46bdc6]"></div>
+            </div>
+            <!-- ─── Seperater ───────────────────── ✣ ─ -->
+            <hr />
+            <!-- custom pallet -->
+            <div class="flex justify-between items-center gap-3 px-4 py-2">
+              <p class="h-4 text-[12px] font-semibold">CUSTOM</p>
+            </div>
+            <div class="px-3 py-1 flex justify-start items-center gap-2 pb-2">
+              <div
+                class="colordot w-4 h-4 border-black bg-[#ffffff] flex justify-center items-center hover:bg-[#e0e5eb]"
+              >
+                <i class="fa-solid fa-plus text-xs"></i>
+              </div>
+              <i class="fa-solid fa-eye-dropper icons"></i>
+            </div>
+            <!-- ─── Seperater ───────────────────── ✣ ─ -->
+            <hr />
+            <!-- more -->
+            <div class="flex justify-center items-center pt-3 menu-item">
+              <p class="font-semibold">Conditional formatting</p>
+            </div>
+          </div>
+        </div>
+        <!--border ─────────────────────────────────────────── ✣ ─ -->
+        <div class="group icons">
+          <i class="fa-solid fa-table-cells-large"></i>
+          <!-- tooltip -->
+          <div class="left-0 tooltip">Borders</div>
+        </div>
+        <!--merge cells ─────────────────────────────────────────── ✣ ─ -->
+        <div class="group icons hover:bg-[#edf2fa]">
+          <img
+            src="./assets/cell_merge_FILL0_wght400_GRAD0_opsz24.png"
+            alt=""
+            class="w-4 opacity-30"
+          />
+          <!-- tooltip -->
+          <div class="left-0 tooltip">Merge cells</div>
+        </div>
+        <div class="group icons pl-0 hover:bg-[#edf2fa]">
+          <i class="fa-solid fa-caret-down opacity-30"></i>
+          <!-- tooltip -->
+          <div class="left-0 tooltip">Select merge type</div>
+        </div>
+        <!-- ─── Seperater ───────────────────── ✣ ─ -->
+        <div class="h-3/5 border-l border-gray-300 mx-1"></div>
+        <!--allign horizontal ─────────────────────────────────────────── ✣ ─ -->
+        <div class="group icons flex items-center gap-2">
+          <i class="fa-solid fa-align-left"></i>
+          <i class="fa-solid fa-caret-down opacity-50"></i>
+          <!-- tooltip -->
+          <div class="left-0 tooltip">Horizontal align</div>
+        </div>
+        <!--allign vertical ─────────────────────────────────────────── ✣ ─ -->
+        <div class="group icons flex items-center gap-2">
+          <i class="fa-solid fa-arrows-down-to-line"></i>
+          <i class="fa-solid fa-caret-down opacity-50"></i>
+          <!-- tooltip -->
+          <div class="left-0 tooltip">Vertical align</div>
+        </div>
+        <!--Text wrapping ─────────────────────────────────────────── ✣ ─ -->
+        <div class="group icons flex items-center gap-2">
+          <img
+            src="./assets/format_text_wrap_FILL0_wght400_GRAD0_opsz24.png"
+            alt=""
+            class="w-3 xl:w-4 2xl:w-5 "
+          />
+          <i class="fa-solid fa-caret-down opacity-50"></i>
+          <!-- tooltip -->
+          <div class="left-0 tooltip">Text wrapping</div>
+        </div>
+        <!--Text rotation ─────────────────────────────────────────── ✣ ─ -->
+        <div class="group icons flex items-center gap-2">
+          <img
+            src="./assets/text_rotation_none_FILL0_wght400_GRAD0_opsz24.png"
+            alt=""
+            class="w-3 xl:w-4 2xl:w-5 "
+          />
+          <i class="fa-solid fa-caret-down opacity-50"></i>
+          <!-- tooltip -->
+          <div class="left-0 tooltip">Text rotation</div>
+        </div>
+        <!-- ─── Seperater ───────────────────── ✣ ─ -->
+        <div class="h-3/5 border-l border-gray-300 mx-1"></div>
+        <!--link ─────────────────────────────────────────── ✣ ─ -->
+        <div class="group icons">
+          <i class="fa-solid fa-link"></i>
+          <!-- tooltip -->
+          <div class="left-0 tooltip">Insert link (Ctrl+K)</div>
+        </div>
+        <!--comment ─────────────────────────────────────────── ✣ ─ -->
+        <div class="group icons">
+          <i class="fa-solid fa-comment"></i>
+          <!-- tooltip -->
+          <div class="left-0 tooltip">Insert comment (Ctrl+Alt+M)</div>
+        </div>
+        <!--chart ─────────────────────────────────────────── ✣ ─ -->
+        <div class="group icons">
+          <i class="fa-solid fa-chart-column"></i>
+          <!-- tooltip -->
+          <div class="left-0 tooltip">Insert chart</div>
+        </div>
+        <!--filter ─────────────────────────────────────────── ✣ ─ -->
+        <div class="group icons">
+          <i class="fa-solid fa-filter"></i>
+          <!-- tooltip -->
+          <div class="left-0 tooltip">Create a filter</div>
+        </div>
+        <!--Filter Views ─────────────────────────────────────────── ✣ ─ -->
+        <div class="group icons flex items-center gap-2">
+          <img
+            src="./assets/table_view_FILL0_wght400_GRAD0_opsz24.png"
+            alt=""
+            class="w-3 xl:w-4 2xl:w-5 "
+          />
+          <i class="fa-solid fa-caret-down opacity-50"></i>
+          <!-- tooltip -->
+          <div class="left-0 tooltip">Filter views</div>
+        </div>
+        <!--function ─────────────────────────────────────────── ✣ ─ -->
+        <div class="group icons">
+          <img
+            src="./assets/functions_FILL0_wght400_GRAD0_opsz24.png"
+            alt=""
+            class="w-3 xl:w-4 2xl:w-5 "
+          />
+          <!-- tooltip -->
+          <div class="left-0 tooltip">Functions</div>
+        </div>
       </div>
     </div>
   </body>
 </html>
+
