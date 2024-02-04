@@ -28,4 +28,13 @@
   .colordot{
     @apply h-[22px] w-[22px] rounded-full border border-gray-300 cursor-pointer
   }
+  .hcell {
+    @apply w-[100px] h-[25px] border-y border-r border-[#c7c7c7] text-center flex-shrink-0 flex items-center justify-center bg-white
+  }
+  .ncell {
+    @apply w-[47px] h-[25px] border-x border-b border-[#c7c7c7] flex-shrink-0 text-center flex items-center justify-center bg-white
+  }
+  .cell {
+    @apply w-[100px] h-[25px] border-b border-r border-[#e0e0e0]  flex-shrink-0 flex items-center p-2  focus:border-[#1a73e8] focus:outline-0 focus:border-2  
+  }
 }
