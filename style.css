@@ -4,17 +4,17 @@
 
 @layer components {
   .tooltip {
-    @apply hidden z-10 group-hover:block absolute  min-w-max  text-xs bg-black text-white px-2 py-1 rounded -bottom-8;
+    @apply hidden z-10 group-hover:block absolute  min-w-max  text-xs bg-texc text-bgc px-2 py-1 rounded -bottom-8;
   }
   .subtip {
-    @apply hidden z-50 group-hover/sub:block absolute  min-w-max  text-xs bg-black text-white px-2 py-1 rounded -bottom-8;
+    @apply hidden z-50 group-hover/sub:block absolute  min-w-max  text-xs bg-texc text-bgc px-2 py-1 rounded -bottom-8;
   }
 
   .menu {
-    @apply absolute left-0 bg-white w-80  shadow-[0_0_7px_0_rgba(0,0,0,0.2)] text-black flex flex-col  z-50;
+    @apply absolute left-0 bg-bgc-m w-80  shadow-[0_0_7px_0_rgba(0,0,0,0.2)] text-texc flex flex-col  z-50;
   }
   .menu-item {
-    @apply flex justify-between items-center gap-3 px-4 py-0.5 xl:py-1 2xl:py-2 hover:bg-[rgba(0,0,0,0.04)]  relative cursor-pointer flex-shrink-0;
+    @apply flex justify-between items-center gap-3 px-4 py-0.5 xl:py-1 2xl:py-2 hover:bg-bgc-mh  relative cursor-pointer flex-shrink-0;
   }
   .icon-size {
     @apply xl:w-4 xl:h-4 w-3 h-3;
@@ -26,18 +26,121 @@
     @apply flex flex-col py-2;
   }
   .icons {
-    @apply relative hover:bg-[#e0e5eb] py-1.5 px-1 xl:px-1.5 2xl:px-2 cursor-pointer flex-shrink-0;
+    @apply relative hover:bg-bgc-mbh py-1.5 px-1 xl:px-1.5 2xl:px-2 cursor-pointer flex-shrink-0;
   }
   .colordot {
     @apply h-[22px] w-[22px] rounded-full border border-gray-300 cursor-pointer;
   }
   .hcell {
-    @apply w-[100px] h-[25px] border-y border-r border-[#c7c7c7] text-center flex-shrink-0 flex items-center justify-center bg-white;
+    @apply w-[100px] h-[25px] border-y border-r border-bgc-tb text-center flex-shrink-0 flex items-center justify-center bg-bgc-t;
   }
   .ncell {
-    @apply w-[47px] h-[25px] border-x border-b border-[#c7c7c7] flex-shrink-0 text-center flex items-center justify-center bg-white;
+    @apply w-[47px] h-[25px] border-x border-b border-bgc-tb flex-shrink-0 text-center flex items-center justify-center bg-bgc-t;
   }
   .cell {
-    @apply w-[100px] h-[25px] border-b border-r border-[#e0e0e0]  flex-shrink-0 flex items-center p-2  focus:border-[#1a73e8] focus:outline-0 focus:border-2;
+    @apply w-[100px] h-[25px] border-b border-r border-bgc-tb  flex-shrink-0 flex items-center p-2  focus:border-[#1a73e8] focus:outline-0 focus:border-2 bg-bgc-t;
+  }
+}
+@layer utilities {
+  .light {
+    --bgc: #f9fbfd; 
+    --texc: #606363;
+    --bgc-h: #e4e4e4;
+    --bgc-b: #c2e7ff;
+    --bgc-bh: #b2d7ef;
+    --bgc-m:#ffffff;
+    --bgc-mh: #f1f3f4;
+    --bgc-mb: #e7f3ff;
+    --bgc-mbh: #dee9f3;
+    --show-check: #ffffff;
+    --show-check-f: #000000;
+    --bgc-t:#ffffff;
+    --bgc-tb:#c4c7c5;
+    --texc-s:#0b57d0;
+
+  }
+  
+  .dark {
+    --bgc: #1f1f1f;
+    --texc: #c4c4c4;
+    --bgc-h: #3d3d3d;
+    --bgc-b: #163f5a;
+    --bgc-bh: #1d5072;
+    --bgc-m:#1c1c21;
+    --bgc-mh: #262626;
+    --bgc-mb: #353535;
+    --bgc-mbh: #444444;
+    --show-check: black;
+    --show-check-f: #ffffff;
+    --bgc-t:#0d0d0d;
+    --bgc-tb:#282828;
+    --texc-s:#99b6e6;
+  }
+  .rose {
+     --bgc: #ff8888;
+    --texc: #1f1f1f;
+    --bgc-h: #bb5656;
+    --bgc-b: #ffcb6a5b;
+    --bgc-bh: #ffcb6a91;
+    --bgc-m:#dd7474;
+    --bgc-mh: #aa5555;
+    --bgc-mb: #ffcb6a5b;
+    --bgc-mbh: #ffcb6a91;
+    --show-check: black;
+    --show-check-f: #ffffff;
+    --bgc-t:#eccce8;
+    --bgc-tb:#4e4e4e;
+    --texc-s:#8a1a06;
+
+  }
+  .mahogany {
+    --bgc: #621830;
+    --texc: #c4c4c4;
+    --bgc-h: #2c1d22;
+    --bgc-b: #922a01;
+    --bgc-bh: #b35a37;
+    --bgc-m:#621830;
+    --bgc-mh: #262626;
+    --bgc-mb: #2c1d22;
+    --bgc-mbh: #444444;
+    --show-check: black;
+    --show-check-f: #ffffff;
+    --bgc-t:#2c1d22;
+    --bgc-tb:#4e4e4e;
+    --texc-s:#99b6e6;
+  }
+   .blue {
+    --bgc: #3ba7ff;
+    --texc: #383838;
+    --bgc-h: #348bd3;
+    --bgc-b: #3d889b;
+    --bgc-bh: #2c7486;
+    --bgc-m:#3ba7ff;
+    --bgc-mh: #348bd3;
+    --bgc-mb: #3d889b;
+    --bgc-mbh: #4494a8;
+    --show-check: black;
+    --show-check-f: #ffffff;
+    --bgc-t:#92dfe9;
+    --bgc-tb:#4e4e4e;
+    --texc-s:#99b6e6;
+
+  }
+  .green {
+     --bgc: #aaff88;
+    --texc: #1f1f1f;
+    --bgc-h: #7ebb56;
+    --bgc-b: #ff6a6a65;
+    --bgc-bh: #ff6a6a91;
+    --bgc-m:#aaff88;
+    --bgc-mh: #7ebb56;
+    --bgc-mb: #ff6a6a65;
+    --bgc-mbh: #ff6a6a91;
+    --show-check: black;
+    --show-check-f: #ffffff;
+    --bgc-t:#d3f3cf;
+    --bgc-tb:#4e4e4e;
+    --texc-s:#8a1a06;
+
   }
 }
