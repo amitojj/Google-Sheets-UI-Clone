@@ -6,6 +6,7 @@ module.exports = {
       colors: {
         bgc: "var(--bgc)",
         texc: "var(--texc)",
+        "texc-t":  "var(--texc-t)",
         "bgc-h": "var(--bgc-h)",
         "bgc-b": "var(--bgc-b)",
         "bgc-bh": "var(--bgc-bh)",
